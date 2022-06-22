@@ -1,0 +1,8 @@
+
+.image_swiper .swiper-button-prev::after,
+.image_swiper .swiper-button-next::after 
+{
+    color: #fff;
+    font-size: 50px;
+
+}
