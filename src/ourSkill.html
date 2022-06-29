@@ -1,0 +1,987 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Мейер и партнёры - МЫ ЗАЩИЩАЕМ ВАШИ ИНТЕРЕСЫ ПО ВСЕЙ РОССИИ!</title>
+
+	<link href="../dist/output.css" rel="stylesheet">
+	<link href="../fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
+
+
+	<link href="http://www.meyer-law.ru/core/views/meyer/css/custom.css" rel="stylesheet" type="text/css">
+	<link href="http://www.meyer-law.ru/core/views/meyer/css/bootstrap.css" rel="stylesheet" type="text/css">
+
+
+	<script src="http://www.meyer-law.ru/core/views/meyer/js/jquery-1.11.3.min.js"></script>
+	<script src="http://www.meyer-law.ru/core/views/meyer/js/sticky.js"></script>
+</head>
+
+<body class="flex flex-col bg-gray-200">
+	<header inset-0 h-12>
+		<section class="cp-head-topbar">
+			<div class="container mx-auto">
+				<div class="flex flex-row">
+					<div class="left-box">
+						<ul>
+							<li><i class="fas fa-phone-alt"></i> <a href="tel:+7 8442 97 82 97"
+									class="font-serif">(8442) 97-82-97</a>
+							</li>
+							<li><i class="fas fa-envelope"></i> <a href="mailto:info@meyer-law.ru"
+									class="font-serif">info@meyer-law.ru</a></li>
+						</ul>
+					</div>
+					<div class="right-box">
+						<ul>
+							<li><i class="fas fa-map-marker-alt font-serif"></i> 400001, г. Волгоград, ул. Профсоюзная,
+								15а</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+		</section>
+
+
+		<div class="container mx-auto"> <strong class="logo"><a href="index.html"><img src="../img/logo.png"
+            alt="img"></a></strong>
+      <div class="navigation-right w-1/2 space-y-4">
+        <ul class="flex space-x-10">
+          <li><a class="font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800 transition duration-300 hover:no-underline hover:text-gray-600" href="index.html">
+                О нас
+            </a></li>
+          <li><a class="font-serif text-3xl text-gray-600 font-medium border border-slate-800 hover:border-slate-800 transition duration-300 hover:no-underline hover:text-gray-600" href="ourSkill.html">
+                Наш опыт
+            </a>
+          </li>
+          <li><a class="font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800 transition duration-300 hover:no-underline hover:text-gray-600" href="http://www.meyer-law.ru/news/all">
+                Новости
+            </a></li>
+          <li><a class="font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800 transition duration-300 hover:no-underline hover:text-gray-600" href="http://www.meyer-law.ru/news/facts">
+                Интересные
+                факты
+            </a></li>
+          <li><a class="font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800 transition duration-300 hover:no-underline hover:text-gray-600" href="http://www.meyer-law.ru/page/search">
+                Поиск
+            </a>
+          </li>
+        </ul>
+        <ul class="flex space-x-10">
+          <li><a class="font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800 transition duration-300 hover:no-underline hover:text-gray-600" href="http://www.meyer-law.ru/page/probono">
+                Pro bono
+            </a></li>
+          <li><a class="font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800 transition duration-300 hover:no-underline hover:text-gray-600" href="http://www.meyer-law.ru/page/reviews">
+                Отзывы
+            </a></li>
+          <li><a class="font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800 transition duration-300 hover:no-underline hover:text-gray-600" href="http://www.meyer-law.ru/page/contests">
+                Конкурс Мейера
+            </a></li>
+          <li><a class="font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800 transition duration-300 hover:no-underline hover:text-gray-600" href="http://www.meyer-law.ru/page/contact">
+                Контакты
+            </a></li>
+        </ul>
+      </div>
+    </div>
+	</header>
+
+
+	<script src="http://www.meyer-law.ru/core/views/meyer/js/map/js/jquery.vmap.js" type="text/javascript">
+	</script>
+
+	<script src="http://www.meyer-law.ru/core/views/meyer/js/map/js/maps/jquery.vmap.russia.js" type="text/javascript">
+	</script>
+
+	<link href="http://www.meyer-law.ru/core/js/jqueryui/jquery-ui.css" media="screen" rel="stylesheet"
+		type="text/css" />
+	<script src="http://www.meyer-law.ru/core/js/jqueryui/jquery-ui.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		// Массив всех объектов	
+		var data_obj = {
+			'ks': ['Крымск', 'Ейск']
+		};
+
+		colorRegion = '#1076C8'; // Цвет всех регионов
+		focusRegion = '#FF9900'; // Цвет подсветки регионов при наведении на объекты из списка
+		selectRegion = '#0A4C82'; // Цвет изначально подсвеченных регионов
+
+		highlighted_states = {};
+
+		// Массив подсвечиваемых регионов, указанных в массиве data_obj
+		for (iso in data_obj) {
+			highlighted_states[iso] = selectRegion;
+		}
+
+		jQuery(function ($) {
+			$(document).ready(function () {
+				$('#vmap').vectorMap({
+					map: 'russia',
+
+					borderColor: '#ffffff',
+					borderWidth: 2,
+					color: colorRegion,
+					colors: highlighted_states,
+					hoverOpacity: 0.7,
+					enableZoom: true,
+					showTooltip: true,
+
+					// Отображаем объекты если они есть
+					onLabelShow: function (event, label, code) {
+						name = '<strong>' + label.text() + '</strong><br>';
+						if (data_obj[code]) {
+							list_obj = '<ul>';
+							for (ob in data_obj[code]) {
+								list_obj += '<li>' + data_obj[code][ob] + '</li>';
+							}
+							list_obj += '</ul>';
+						} else {
+							list_obj = '';
+						}
+						label.html(name + list_obj);
+						list_obj = '';
+					},
+					// Клик по региону
+					onRegionClick: function (element, code, region) {
+						//alert(region+' - ' +code);
+						$('#region_' + code).dialog({
+							width: '90%',
+							height: '450',
+							show: {
+								effect: "explode",
+								duration: 1000
+							}
+						});
+					}
+				});
+
+			});
+			// Выводим список объектов из массива
+			$(document).ready(function () {
+				for (region in data_obj) {
+					for (obj in data_obj[region]) {
+						$('.list-object').append('<li><a href="' + selectRegion + '" id="' + region +
+							'" class="focus-region">' + data_obj[region][obj] + ' (' + region +
+							')</a></li>');
+					}
+				}
+			});
+
+			// Подсветка регионов при наведении на объекты
+			$(function () {
+				$('.focus-region').mouseover(function () {
+					iso = $(this).prop('id');
+					fregion = {};
+					fregion[iso] = focusRegion;
+					$('#vmap').vectorMap('set', 'colors', fregion);
+				});
+				/*	$('.focus-region').mouseout(function(){
+						c = $(this).attr('href');			
+						cl = (c === '#')?colorRegion:c;
+						iso = $(this).prop('id');
+						fregion = {};
+						fregion[iso] = cl;
+						$('#vmap').vectorMap('set', 'colors', fregion);
+					});*/
+
+				var areas_array = $('.focus-region').toArray();
+				var i;
+				var iso;
+				var fregion;
+				for (i = 0; i < areas_array.length; i++) {
+					iso = $(areas_array[i]).prop('id');
+					fregion = {};
+					fregion[iso] = focusRegion;
+					$('#vmap').vectorMap('set', 'colors', fregion);
+				}
+
+			});
+
+
+		});
+	</script>
+	<style>
+		ul,
+		ol {
+			margin: 0;
+			padding: 0;
+		}
+
+		.tutorial {
+			width: 33%;
+			min-width: 280px;
+			margin: 0 auto;
+		}
+
+		.rounded ol,
+		.rectangle ol {
+			list-style: none;
+		}
+
+		.rounded,
+		.rectangle {
+			counter-reset: li;
+			list-style: none;
+			font: 14px "Trebuchet MS", "Lucida Sans";
+			padding: 0;
+			text-shadow: 0 1px 0 rgba(255, 255, 255, .5);
+		}
+
+		.rounded a {
+			position: relative;
+			display: block;
+			padding: .4em .4em .4em 2em;
+			margin: .5em 0 0 1.3em;
+			;
+			background: #DAD2CA;
+			color: #444;
+			text-decoration: none;
+			border-radius: .3em;
+			transition: all .3s ease-out;
+		}
+
+		.rounded a:hover {
+			background: #E9E4E0;
+		}
+
+		.rounded a:hover:before {
+			transform: rotate(360deg);
+		}
+
+		.rounded a:before {
+			content: counter(li);
+			counter-increment: li;
+			position: absolute;
+			left: -1.3em;
+			top: 50%;
+			margin-top: -1.3em;
+			background: #8FD4C1;
+			height: 2em;
+			width: 2em;
+			line-height: 2em;
+			border: .3em solid white;
+			text-align: center;
+			font-weight: bold;
+			border-radius: 2em;
+			transition: all .3s ease-out;
+		}
+
+		.rectangle a {
+			position: relative;
+			display: block;
+			padding: .4em .4em .4em .8em;
+			margin: .5em 0 .5em 2.5em;
+			background: #D3D4DA;
+			color: #444;
+			text-decoration: none;
+			transition: all .3s ease-out;
+		}
+
+		.rectangle a:hover {
+			background: #DCDDE1;
+		}
+
+		.rectangle a:before {
+			content: counter(li);
+			counter-increment: li;
+			position: absolute;
+			left: -2.5em;
+			top: 50%;
+			margin-top: -1em;
+			background: #9097A2;
+			height: 2em;
+			width: 2em;
+			line-height: 2em;
+			text-align: center;
+			font-weight: bold;
+		}
+
+		.rectangle a:after {
+			position: absolute;
+			content: "";
+			border: .5em solid transparent;
+			left: -1em;
+			top: 50%;
+			margin-top: -.5em;
+			transition: all .3s ease-out;
+		}
+
+		.rectangle a:hover:after {
+			left: -.5em;
+			border-left-color: #9097A2;
+		}
+	</style>
+
+	<div id="region_le" style="display:none;">
+
+		<a href="#">Победа в КС РФ</a>
+		<br><br>
+		02 февраля 2011г.<br><br>
+		31 января 2011 года Конституционный Суд РФ провозгласил Постановление по делу о проверке
+		конституционности положений частей 1, 3 и 9 статьи 115, статьи 208 Уголовно-процессуального кодекса РФ и
+		абзаца девятого пункта 1 статьи 126 Федерального закона «О несостоятельности (банкротстве)».
+		<br>
+		Поводом к рассмотрению дела явились жалобы ЗАО «Недвижимость-М», ООО «Соломатинское хлебоприемное
+		предприятие» (интересы доверителя представляли адвокаты «Мейер, Яковлев и партнеры») и гражданки
+		Костаревой Людмилы Ивановны.
+		<br>
+		Дело было рассмотрено Конституционным Судом РФ 15 декабря 2010 года. На заседании присутствовали
+		адвокаты «Мейер, Яковлев и партнеры» Олег Елкин и Андрей Белоножкин.
+		<br><br>
+		В июле 2007 года ООО «Соломатинское хлебоприемное предприятие» было признано несостоятельным (банкротом)
+		и в отношении него открыто конкурсное производство. Согласно ФЗ «О несостоятельности (банкротстве)»,
+		после признания должника банкротом, снимаются ранее наложенные аресты на имущество и не допускается
+		наложение новых. Однако в 2008 году, основываясь на уголовном деле в отношении генерального директора
+		этого предприятия, суд наложил арест на имущество ООО с целью возмещения ущерба.
+		<br>
+		В своей жалобе в КС РФ заявитель оспаривает нормы, допускающие арест на имущество не являющегося
+		участником уголовного судопроизводства предприятия-банкрота, в отношении которого открыто конкурсное
+		производство. ООО считает, что оспариваемые нормы ставят одних участников конкурсного производства в
+		неравное положение с другими в зависимости от их участия в уголовном судопроизводстве.
+		<br><br>
+		В своём Постановлении Конституционный Суд РФ отмечает, что правоприменитель не в праве положениям статьи
+		115 УПК РФ придавать смысл, противоречащий законодательству о банкротстве. Тем самым, создавать
+		привилегированные условия для отдельных конкурсных кредиторов лишь в силу признания их субъектами
+		уголовного судопроизводства.
+		<br>
+		Согласно ФЗ «О несостоятельности (банкротстве)», особый режим имущественных требований к должнику
+		создает условия для преодоления его неплатежеспособности и для возможно более полного удовлетворения
+		требований всех кредиторов. Все это направлено на предоставление кредиторам равных возможностей при
+		реализации экономических интересов. Положения части 3 статьи 115 УПК РФ в их взаимосвязи с абзацем 9
+		пункта 1 статьи 126 ФЗ «О несостоятельности (банкротстве)» они не предполагают ни наложения ареста на
+		имущество должника, находящегося в процедуре конкурсного производства, ни сохранения ранее наложенного
+		ареста в рамках уголовного судопроизводства.
+		<br>
+		В соответствии с Постановлением правоприменительное решение по делу ООО «Соломатинское хлебоприемное
+		предприятие» подлежит пересмотру в установленном порядке.
+		<br><br>
+		Адвокат «Мейер, Яковлев и партнеры» Андрей Белоножкин в интервью газете «Коммерсантъ» назвал данное
+		решение КС "победой ВАС РФ, который настаивал на приоритете закона о банкротстве, над Верховным судом
+		РФ, который ссылался на УПК"
+		<br>
+		В интервью «Российской газете» Андрей Юрьевич рассказал о сложной ситуации на предприятии повлекшей
+		обращение в КС РФ.
+		<br><br>
+
+		Подробности дела на сайте КС РФ: <a href="http://www.ksrf.ru/News/Pages/ViewItem.aspx?ParamId=840"
+			target="_blank">http://www.ksrf.ru/News/Pages/ViewItem.aspx?ParamId=840</a>
+		<br>
+		Статья в газете «Коммерсантъ»: <a
+			href="http://www.kommersant.ru/doc.aspx?fromsearch=e77ce412-206b-4064-ae20-09aba4519316&docsid=1577326"
+			target="_blank">http://www.kommersant.ru/doc.aspx?fromsearch=e77ce412-206b-4064-ae20-09aba4519316&docsid=1577326</a>
+		<br>
+		Статья в «Российской газете» <a href="http://www.rg.ru/2011/02/01/bankrotstvo.html"
+			target="_blank">http://www.rg.ru/2011/02/01/bankrotstvo.html</a>
+
+	</div>
+
+
+	<div id="region_ta" style="display:none;">
+
+		<b>Казань</b>
+		<br>
+		<p style="color:#000;">
+			ООО «Волга-Дон- Транссервис» является крупным волгоградским транспортно-
+
+			экспедиторским предприятием. Компания успешно работает на всей территории
+
+			Российской Федерации и государства Белоруссия с 1999 года.
+
+			Среди ее клиентов крупные предприятия нефтегазодобывающей отрасли.
+
+			Специфика деятельности компании состоит в перевозке крупногабаритных и
+
+			тяжеловесных грузов всеми видами транспорта.</p>
+		<br>
+		<p style="color:#000;">В 2014 году ООО «Волга-Дон- Транссервис» в судебном порядке взыскало с
+
+			недобросовестного должника ООО «СпецТяжМонтаж» 22,5 млн. рублей. В целях
+
+			реального получения задолженности ООО «Волга-Дон- Транссервис» инициировало
+
+			процедуру признания несостоятельным (банкротом) ООО «СпецТяжМонтаж» и замену
+
+			менеджмента должника.</p>
+		<br>
+		<p style="color:#000;">
+			С помощью адвокатов Волгоградской коллегии адвокатов «Мейер и партнеры»
+
+			менеджмент ООО «СпецТяжМонтаж» был заменен на квалифицированный и его действия
+
+			были направлены на возврат имущества, сокрытого от ООО «Волга-Дон- Транссервис»
+
+			прежним менеджментом.</p>
+		<br>
+		<p style="color:#000;">
+			В 2015 году ООО «Волга-Дон- Транссервис» поставил перед адвокатами задачу
+
+			выступать от имени ООО «СпецТяжМонтаж» в отношениях с его недобросовестными
+
+			контрагентами по возврату имущества (активов) должника. Клиент намерен за счет этих
+
+			активов получить возврат задолженности.
+
+			Адвокаты Волгоградской коллегии адвокатов «Мейер и партнеры» инициировали
+
+			иски об оспаривании сделок, которые заключались недобросовестным менеджментом
+
+			ООО «СпецТяжМонтаж».</p>
+		<br>
+		<p style="color:#000;">
+			В результате проведенных мероприятий адвокаты добились судебных побед. Так,
+
+			была признана сделка, стоимостью 26 млн. рублей (определение Арбитражного суда
+
+			Республики Татарстан городе Казань от 11.08.2015г. по делу №А65-16552/2014). Данная сумма
+
+			возвращена в состав активов ООО «СпецТяжМонтаж».
+
+			Также адвокаты добились взыскания в пользу ООО «СпецТяжМонтаж» 9 млн.
+
+			рублей с недобросовестного контрагента – ООО «СОПИГ» (постановление Девятого
+
+			арбитражного апелляционного суда городе Москва).
+
+			Таким образом, были созданы условия для реального получения ООО «Волга-Дон-
+
+			Транссервис» задолженности от ООО «СпецТяжМонтаж».
+
+			Ключевые представители Волгоградской коллегии адвокатов «Мейер и партнеры»,
+
+			которые приняли участие в данном проекте: адвокаты Халин А. О., Расолько. Н. В.,
+
+			Сигарев В. В.<br />
+			<br /><b>
+				Другие интересные проекты, которые ведут адвокаты "Мейер и партнеры" в городе Казань, в
+				настоящее время не завершены</b></p>
+	</div>
+
+	<div id="region_vl" style="display:none;">
+
+		<b>Волгоград</b>
+		<br>
+		<p style="color:#000;">
+			ООО «ЛУКОЙЛ-Волгоградэнерго» создано в 2009 году и является 100% дочерним
+
+			Обществом Публичного акционерного общества «ЛУКОЙЛ». Компания осуществляет
+
+			деятельность на юге России и зарегистрирована в городе Волгограде.
+
+			Основными видами деятельности компании являются: производство электрической
+
+			и тепловой энергии тепловыми электростанциями, реализация электрической энергии на
+
+			оптовом рынке, тепловой энергии и энергоносителя – на розничном рынке.
+
+			ООО «ЛУКОЙЛ- Волгоградэнерго» получило претензию органа муниципальной
+
+			власти – Комитета земельных ресурсов Администрации городе Волжского Волгоградской
+
+			области о необходимости погашения задолженности по арендной плате за использование
+
+			земельного участка.</p>
+		<br>
+		<p style="color:#000;">
+			Спор возник из-за того, что стороны по-разному производили расчет арендной
+
+			платы. ООО «ЛУКОЙЛ- Волгоградэнерго» считало, что поскольку на земельном участке
+
+			находится шламоотвал – гидротехническое сооружение, то земля должна признаваться
+
+			ограниченной в обороте и, как следует из закона, арендная плата становится из-за этого
+
+			меньше. Орган власти считал, что шламоотвал не является гидротезническим
+
+			сооружением.</p>
+		<br>
+		<p style="color:#000;">
+			Разъяснений по этому поводу ни в законе, ни в судебной практике не было. Дело
+
+			получило беспрецедентный характер.</p>
+		<br>
+		<p style="color:#000;">
+			Поскольку Комитет земельных ресурсов Администрации городе Волжского
+
+			Волгоградской области обратился с иском о взыскании денежных средств в суд, ООО
+
+			«ЛУКОЙЛ- Волгоградэнерго» обратилось к адвокатам Волгоградской коллегии адвокатов
+
+			«Мейер и партнеры» с поручением подготовить защиту от иска.
+
+			Адвокаты Волгоградской коллегии адвокатов «Мейер и партнеры» достойно
+
+			отстояли интересы клиента в трех судебных инстанциях. В судебном споре, тянувшемся
+
+			10 месяцев, удалось доказать правоту клиента.
+
+			Адвокаты использовали практику лингвистического толкования назначения
+
+			имущества и расширительного толкования закона. Правовые позиции адвокатов были
+
+			признаны судом убедительными.</p>
+		<br>
+		<p style="color:#000;">
+			Судебный процесс сопровождался яркими рисунками и фотографиями шламоотвала.
+
+			Адвокаты были на высоте в своем ораторском искусстве. Судьи однозначно признали в
+
+			шламоотвале гидротехническое сооружение, а не просто имущество, на чем настаивал
+
+			истец.</p>
+		<br>
+		<p style="color:#000;">
+			Адвокаты создали важный прецедент, которым теперь может руководствоваться не
+
+			только клиент, но и другие землепользователи в схожих ситуациях (дело №А12-
+
+			46033/2015).
+
+			Ключевой представитель Волгоградской коллегии адвокатов «Мейер и партнеры»,
+
+			принявший участие в данном проекте: адвокат Архипенкова А. А.<br /><br /><b>
+				Другие интересные проекты, которые ведут адвокаты "Мейер и партнеры" в городе Волгоград, в
+				настоящее время не завершены </b></p>
+
+	</div>
+
+	<div id="region_mc" style="display:none;">
+		<b>Москва</b>
+		<p style="color:#000;">Адвокаты «Мейер и партнеры» добились защиты интересов МУП «Райжилкомбытгазстрой»
+			в Высшем Арбитражном Суде Российской Федерации.</p>
+		<p style="color:#000;">В связи с неисполнением судебного акта о взыскании денежных средств с
+			муниципального образования в пользу МУП «Райжилкомбытгазстрой», последнее обратилось в Федеральный
+			арбитражный суд Поволжского округа с заявлением о взыскании с муниципального образования 17 933
+			рублей 16 копеек компенсации за нарушение права на исполнение в разумный срок судебного акта.</p>
+		<p style="color:#000;">Федеральный арбитражный суд Поволжского округа решением от 18.05.2012 по делу №
+			А12-14977/2010 заявление удовлетворил частично: в пользу предприятия с муниципального образования в
+			лице администрации за счет его казны взыскано 10 000 рублей компенсации и 4 000 рублей
+			государственной пошлины; в удовлетворении остальной части требования отказано.</p>
+		<p style="color:#000;">Постановлением Президиума ВАС РФ от 12.03.2013 № 8711/12 по делу № А12-14977/2010
+			указанное решение Федерального арбитражного суда Поволжского округа отменено.</p>
+		<p style="color:#000;">Требование МУП «Райжилкомбытгазстрой» удовлетворено.</p>
+		<p style="color:#000;">Взыскано с муниципального образования Алексеевский муниципальный район
+			Волгоградской области в лице администрации Алексеевского муниципального района Волгоградской области
+			за счет казны Алексеевского муниципального района Волгоградской области в пользу муниципального
+			унитарного предприятия «Райжилкомбытгазстрой» 17 933 рубля 16 копеек компенсации за нарушение права
+			на исполнение в разумный срок решения Арбитражного суда Волгоградской области от 09.09.2010 по
+			названному делу, а также проценты годовых от указанной суммы компенсации по учетной ставке (ставке
+			рефинансирования) Центрального банка Российской Федерации, увеличенной на 3 процента, с момента
+			принятия настоящего постановления и до полной уплаты суммы компенсации.</p>
+		<p style="color:#000;">Данным Постановлением Президиума ВАС РФ создан прецедент расчет суммы компенсации
+			за спорный период исходя из ставки рефинансирования (учетной ставки) в размере 8 процентов,
+			установленной Центральным банком Российской Федерации на момент спорных правоотношений.</p>
+		<p style="color:#000;">Также создан прецедент взыскания процентов годовых от указанной суммы компенсации
+			по учетной ставке (ставке рефинансирования) Центрального банка Российской Федерации (8,25 процента
+			годовых), увеличенной на 3 процента (то есть 11,25 процента годовых), с момента принятия настоящего
+			постановления и до полной уплаты суммы компенсации.</p>
+		<p style="color:#000;">Ключевой представитель Волгоградской коллегии адвокатов «Мейер и партнеры»,
+			который принял участие в данном проекте: адвокат Лукин Д. В.
+			<br /><br /><b>
+				Другие интересные проекты, которые ведут адвокаты "Мейер и партнеры" в городе Москва, в
+				настоящее время не завершены</b></p>
+
+	</div>
+	<div id="region_as" style="display:none;">
+		<b>Астрахань</b>
+		<p style="color:#000;">В интересах аффилированных лиц корпорации «Лукойл» в рамках процедуры банкротства
+			нескольких управляющих компаний сферы ЖКХ адвокаты «Мейер и партнеры» инициировали несколько
+			судебных процессов и добились возврата задолженности за счет муниципальных образований в пользу
+			корпорации «Лукойл» на общую сумму 30 млн. рублей (дела №A06-5599/2013, №A06-5598/2013).
+			В проекте приняли участие все адвокаты «Мейер и партнеры».<br /><br /><b>
+				Другие интересные проекты, которые ведут адвокаты "Мейер и партнеры" в городе Астрахань, в
+				настоящее время не завершены</b></p>
+	</div>
+	<div id="region_sr" style="display:none;">
+		<b>Саратов</b>
+		<p style="color:#000;">
+
+			Адвокаты «Мейер и партнеры» обеспечили возврат налогов, уплаченных клиентом в
+
+			преддверии банкротства в нарушение очередности и пропорциональности удовлетворения
+
+			требований кредиторов.</p>
+
+		<p style="color:#000;">В результате судебных споров требования адвокатов были удовлетворены.
+
+			Налоговым органом произведен возврат налогов в размере 300 000 000 руб., за счет
+
+			которых удалось погасить значительную часть реестра требований кредиторов ОАО
+
+			«Коммунальные технологии Волгограда» (дело № А12-16179/2009).
+
+			Создан прецедент по возврату излишне уплаченного налога не по правилам ст. 78
+
+			НК РФ, а по правилам ст. ст. 61.3, 103 ФЗ «О несостоятельности (банкротстве)».</p>
+
+		<p style="color:#000;">Ключевой представитель Волгоградской коллегии адвокатов «Мейер и партнеры»,
+
+			который принял участие в данном проекте: адвокат Ёлкин О. В.</p><br /><br /><b>
+			Другие интересные проекты, которые ведут адвокаты "Мейер и партнеры" в городе Саратов, в настоящее
+			время не завершены</b>
+	</div>
+	<div id="region_or" style="display:none;">
+
+		<b>Орёл<b>
+				<p style="color:#000;">
+					Общество с ограниченной ответственностью «Каргилл» ведущий в мире производитель
+
+					кормовой продукции для всех видов животных, в том числе и для продуктивных, занимается
+
+					производством и продажей кормов с 1884 городе Сегодня в 25 странах мира на 172 заводах
+
+					компании производятся премиксы и кормовые продукты высокого качества.
+
+					В настоящий момент «Каргилл» в России выпустил портфолио новых продуктов для
+
+					птицеводства, свиноводства и крупного рогатого скота, в котором отражены потребности
+
+					клиентов, а также учтены достижения конкурентов. Портфолио объединяет в себе
+
+					информацию о комбикормах, концентратах и премиксах, а кроме того, в нем представлены
+
+					сведения о продуктах для кормления молодняка.</p>
+				<br>
+				<p style="color:#000;">
+					Общество с ограниченной ответственностью «Каргилл» является кредитором Общества
+
+					с ограниченной ответственностью «Орловская объединенная зерновая компания», в
+
+					отношении которой возбуждена процедура несостоятельности (банкротства).
+
+					Дальнейшее проведение процедуры несостоятельности (банкротства) столкнулось с
+
+					проблемой, вызванной тем, что в судебном порядке была признана несостоявшейся
+
+					реорганизация должника. В этом случае процедура несостоятельности (банкротства) в
+
+					отношении Общества с ограниченной ответственностью «Орловская объединенная зерновая
+
+					компания» подлежала бы прекращению и, как следствие, все достижения в виде оспоренных
+
+					сделок, заключенных должником, были бы аннулированы.</p>
+				<br>
+				<p style="color:#000;">
+
+					Такое положение дел противоречило интересам Общество с ограниченной
+
+					ответственностью «Каргилл», в связи с чем, оно обратилось к адвокатам Волгоградской
+
+					коллегии адвокатов «Мейер и партнеры» с поручением создать правовой механизм, при
+
+					котором, процедура несостоятельности (банкротства) в отношении Общества с ограниченной
+
+					ответственностью «Орловская объединенная зерновая компания» не прекратилась и
+
+					продолжалась.</p>
+				<br>
+				<p style="color:#000;">
+					Адвокаты Волгоградской коллегии адвокатов «Мейер и партнеры» подготовили
+
+					документы и инициировали в арбитражном суде процедуру рассмотрения заявления о
+
+					процессуальной замене должника – Общества с ограниченной ответственностью «Орловская
+
+					объединенная зерновая компания» в деле о его несостоятельности (банкротстве).
+
+					Определением Арбитражного суда Орловской области от 19 октября 2015 года по делу
+
+					№ А48-5865/2014 указанное заявление было удовлетворено: должник по делу о банкротстве
+
+					– Общество с ограниченной ответственностью «Орловская объединенная зерновая
+
+					компания» был заменен на Акционерное общество «Орловская объединенная зерновая
+
+					компания».</p>
+				<br>
+				<p style="color:#000;">
+					Такое решение позволило продолжить процедуру несостоятельности (банкротства), что
+
+					позволило соблюсти интересы всех кредиторов, в том числе, Общество с ограниченной
+
+					ответственностью «Каргилл». Более того, реализованная адвокатами идея привела к
+
+					созданию важного прецедента – возможности процессуальной замены должника в деле о его
+
+					несостоятельности (банкротстве).</p>
+				<br>
+				<p style="color:#000;">
+
+					Ранее в судебной практике таких решений не выносилось. Роль данного прецедента
+
+					важна еще и потому, что российское законодательство о несостоятельности (банкротстве) не
+
+					содержит прямой нормы, допускающей возможность процессуальной замены должника в
+
+					деле о его несостоятельности (банкротстве).
+
+					Ключевой представитель Волгоградской коллегии адвокатов «Мейер и партнеры»,
+
+					принявший участие в данном проекте: адвокат Чесноков Б. А.
+					<br /><br /><b>
+						Другие интересные проекты, которые ведут адвокаты "Мейер и партнеры" в городе Орёл, в
+						настоящее время не завершены</b>
+				</p>
+	</div>
+
+	<div id="region_ya" style="display:none;">
+		<b>Салехард<b>
+				<p style="color:#000;">Проекты, которые ведут адвокаты "Мейер и партнеры" в городе Салехард, в
+					настоящее время не завершены</p>
+	</div>
+	<div id="region_ht" style="display:none;">
+		<b>Тюмень<b>
+				<p style="color:#000;">Проекты, которые ведут адвокаты "Мейер и партнеры" в городе Тюмень, в
+					настоящее время не завершены</p>
+	</div>
+	<div id="region_ks" style="display:none;">
+		<b>Крымск<b>
+				<p style="color:#000;">Проекты, которые ведут адвокаты "Мейер и партнеры" в городе Крымск, в
+					настоящее время не завершены</p>
+	</div>
+	<div id="region_amr" style="display:none;">
+		<b>Благовещенск<b>
+				<p style="color:#000;">Проекты, которые ведут адвокаты "Мейер и партнеры" в городе Благовещенск,
+					в настоящее время не завершены</p>
+	</div>
+	<div id="region_es" style="display:none;">
+		<b>Ейск<b>
+				<p style="color:#000;">Проекты, которые ведут адвокаты "Мейер и партнеры" в городе Ейск, в
+					настоящее время не завершены</p>
+	</div>
+	<div id="region_vn" style="display:none;">
+		<b>Воронеж<b>
+				<p style="color:#000;">Проекты, которые ведут адвокаты "Мейер и партнеры" в городе Воронеж, в
+					настоящее время не завершены</p>
+	</div>
+	<div id="region_lp" style="display:none;">
+		<b>Липецк<b>
+				<p style="color:#000;">Проекты, которые ведут адвокаты "Мейер и партнеры" в городе Липецк, в
+					настоящее время не завершены</p>
+	</div>
+	<div id="region_ad" style="display:none;">
+		<b>Майкоп<b>
+				<p style="color:#000;">Проекты, которые ведут адвокаты "Мейер и партнеры" в городе Майкоп, в
+					настоящее время не завершены</p>
+	</div>
+
+	<div id="inner-banner">
+		<div class="container mx-auto">
+			<h1 class="flex justify-center">
+				<p class="font-serif text-6xl text-white font-semibold">
+					Наш опыт</p>
+			</h1>
+			<ol class="breadcrumb">
+				<li><a href="index.html">Главная</a></li>
+				<li>Наш опыт</li>
+			</ol>
+		</div>
+	</div>
+
+
+	<section class="cp-welcome padding-tb-60">
+		<div class="container mx-auto">
+			<div class="flex flex-col">
+
+				<div class="font-serif text-5xl text-red-900 font-semibold uppercase overline">
+					<span>Мы защищаем Ваши интересы по всей России...</span></div>
+				<div id="vmap" style="width: 100%; height: 500px;"></div>
+
+				<div class="columns-md-10">
+					<ul class="rectangle">
+						<div class="col-md-5">
+							<li><a href="javascript:;">Салехард</a></li>
+							<li><a href="javascript:;">Тюмень</a></li>
+							<li><a href="javascript:;">Благовещенск</a></li>
+							<li><a href="javascript:;">Крымск</a></li>
+							<li><a href="javascript:;">Ейск</a></li>
+							<li><a href="javascript:;">Волгоград</a></li>
+							<li><a href="javascript:;">Саратов</a></li>
+							<li><a href="javascript:;">Казань</a></li>
+						</div>
+						<div class="col-md-5">
+							<li><a href="javascript:;">Астрахань</a></li>
+							<li><a href="javascript:;">Воронеж</a></li>
+							<li><a href="javascript:;">Липецк</a></li>
+							<li><a href="javascript:;">Орёл</a></li>
+							<li><a href="javascript:;">Майкоп</a></li>
+							<li><a href="javascript:;">Москва</a></li>
+							<li><a href="javascript:;">Санкт-Петербург</a></li>
+
+
+						</div>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<footer>
+		<section class="cp-footer-content">
+			<div class="container mx-auto">
+				<div class="flex-row">
+					<div class="columns-md-3 col-sm-3">
+						<div class="columns-md-6 columns-sm-6 col-xs-6">
+							<img class="footer-reward-left-img" src="../img/brand-1.png">
+						</div>
+						<div class="columns-md-6 columns-sm-6 col-xs-6">
+							<img class="footer-reward-right-img" src="../img/brand-2.png">
+						</div>
+						<div class="col-md-12 columns-sm-6">
+							<img src="../img/brand-3.png">
+						</div>
+					</div>
+
+					<div class="columns-md-9 col-sm-9">
+						<div class="col-md-3 col-sm-3 foot-col-3">
+							<nav class="navbar">
+								<ul class="space-y-6">
+									<li>
+										<i class="fas fa-square"></i>
+										<a class="font-serif text-2xl text-white font-semibold hover:text-white"
+											href="http://www.meyer-law.ru/page/practice-bank">
+											Банкротство</a>
+									</li>
+									<li>
+										<i class="fas fa-square"></i>
+										<a class="font-serif text-2xl text-white font-semibold hover:text-white"
+											href="http://www.meyer-law.ru/page/practice-bank">
+											Исполнительное право</a>
+									</li>
+									<li>
+										<i class="fas fa-square"></i>
+										<a class="font-serif text-2xl text-white font-semibold hover:text-white"
+											href="http://www.meyer-law.ru/page/practice-bank">
+											Арбитражный процесс</a>
+									</li>
+									<li>
+										<i class="fas fa-square"></i>
+										<a class="font-serif text-2xl text-white font-semibold hover:text-white"
+											href="http://www.meyer-law.ru/page/practice-bank">
+											Налоговое право</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="col-md-6 col-sm-6 foot-col-6">
+							<nav class="navbar">
+								<ul class="space-y-6">
+									<li>
+										<i class="fas fa-square"></i>
+										<a class="font-serif text-2xl text-white font-semibold hover:text-white"
+											href="http://www.meyer-law.ru/page/practice-bank">
+											Строительство и недвижимость</a>
+									</li>
+									<li>
+										<i class="fas fa-square"></i>
+										<a class="font-serif text-2xl text-white font-semibold hover:text-white"
+											href="http://www.meyer-law.ru/page/practice-bank">
+											Антимонопольное регулирование</a>
+									</li>
+									<li>
+										<i class="fas fa-square"></i>
+										<a class="font-serif text-2xl text-white font-semibold hover:text-white"
+											href="http://www.meyer-law.ru/page/practice-bank">
+											Природные ресурсы. Энергетика</a>
+									</li>
+									<li>
+										<i class="fas fa-square"></i>
+										<a class="font-serif text-2xl text-white font-semibold hover:text-white"
+											href="http://www.meyer-law.ru/page/practice-bank">
+											Корпоративное право</a>
+									</li>
+								</ul>
+							</nav>
+						</div>
+						<div class="columns-md-3 col-sm-3">
+							<div class="col-md-6 col-sm-12 col-xs-12">
+								<noindex><a href="http://www.fparf.ru/" rel="nofollow" target="_blank"><img
+											src="../img/gerb.png"></a>
+								</noindex>
+							</div>
+							<div class="col-md-6 col-sm-12 col-xs-12">
+								<noindex><a href="http://www.apvo-volgograd.ru/" rel="nofollow" target="_blank"><img
+											src="../img/logo-(1).png"></a>
+								</noindex>
+							</div>
+						</div>
+
+						<div class="col-md-12 col-sm-12">
+							<div class="col-md-6 col-sm-6">
+								<div class="cp-contacts-section"> 400001, г. Волгоград, ул. Профсоюзная,
+									15а.<br> info@meyer-law.ru</div>
+							</div>
+							<div class="col-md-6 col-sm-6">
+								<div class="cp-copyright-section"> <strong class="copy">Адвокаты, Волгоград<br>
+										Мейер и партнеры</strong> </div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+	</footer>
+	<div class="relative">
+		<div class="fixed bottom-0 left-0 right-0 bg-gray-200">
+			<div class="container mx-auto">
+				<div class="flex flex-row">
+					<div class=" ml-[400px] text-center news-pod py-3">
+						<input placeholder="E-mail" class="border transition duration-500 placeholder-gray-400 font-normal border-slate-800 w-1/2 py-2
+							text-left pl-4 text-slate-800 focus:outline-none">
+						<a href="#subscribe_form" class="text-center text-red-700 font-bold hover:bg-red-700 hover:text-white
+							 hover:border-white py-2 w-1/4 bg-white border-2 border-red-700 transition delay-150 duration-700">Подписаться
+							на новости</a>
+					</div>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+	<script>
+		jQuery(function ($) {
+			function stickyload() {
+				$('.sticky')
+					.on("sticky_kit:bottom", function (e) {
+						$(this).parent().css('position', 'static');
+					})
+					.on("sticky_kit:unbottom", function (e) {
+						$(this).parent().css('position', 'relative');
+					});
+			}
+
+			var winWidth = $(window).width();
+
+			if (winWidth > 992) {
+
+				$(".sticky").stick_in_parent({
+					parent: '.sticky-wrapper',
+					offset_top: 20,
+					bottoming: true
+				});
+				stickyload();
+
+			}
+			$(window).resize(function () {
+				var winWidth = $(window).width();
+				if (winWidth < 992) {
+					$(".sticky").trigger("sticky_kit:detach");
+				} else {
+					$(".sticky").stick_in_parent({
+						parent: '.sticky-wrapper',
+						offset_top: 20
+					});
+				}
+			});
+
+
+			$('#h_menu_main').removeClass('active');
+
+			$('#h_menu_expa').addClass('active');
+		});
+	</script>
+
+</body>
+
+</html>
