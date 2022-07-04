@@ -2328,7 +2328,7 @@ strong.footer-logo a {
 #inner-banner {
     float: left;
     width: 100%;
-    background-image: url(../images/inner-banner.png);
+    background-image: url(../img/inner-banner.png);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -4644,7 +4644,7 @@ color: #000;text-decoration: none;}
     cursor: pointer;
     position: relative;
 }
-.accordion_cp:before {
+.accordion_cp::before {
     content: "\f00c";
     position: absolute;
     font-family: FontAwesome;
@@ -4663,10 +4663,10 @@ color: #000;text-decoration: none;}
     float: right;
     padding: 0;
 }
-.accordion-close span .fa {
+.accordion-close span .fas {
     color: #999;
 }
-.accordion-open span .fa {
+.accordion-open span .fas {
     color: #999;
 }
 .accordion-close span {
