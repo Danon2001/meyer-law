@@ -47,7 +47,7 @@
 		<div class="container mx-auto"> <strong class="logo"><a href="index.html"><img src="../img/logo.png"
 				alt="img"></a></strong>
 		  <div class="navigation-right whitespace-nowrap">
-			<ul class="flex space-x-0">
+			<ul class="flex space-x-0" style="margin-bottom: 10px;">
 			  <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
 				 transition ease-in duration-300 hover:no-underline hover:text-gray-600" href="index.html">
 					О нас
@@ -96,14 +96,11 @@
 
 
 	<!-- Скрипты, связанные с картой (взято с сайта)-->
-	<script src="http://www.meyer-law.ru/core/views/meyer/js/map/js/jquery.vmap.js" type="text/javascript">
-	</script>
-
-	<script src="http://www.meyer-law.ru/core/views/meyer/js/map/js/maps/jquery.vmap.russia.js" type="text/javascript">
-	</script>
-
-	<link href="http://www.meyer-law.ru/core/js/jqueryui/jquery-ui.css" media="screen" rel="stylesheet"
-		type="text/css" />
+	<link href="../swiper/map.css" media="screen" rel="stylesheet">    
+    <script src="http://www.meyer-law.ru/core/views/meyer/js/map/js/jquery.vmap.js" type="text/javascript"></script>
+    <script src="http://www.meyer-law.ru/core/views/meyer/js/map/js/maps/jquery.vmap.russia.js" type="text/javascript"></script>
+    
+	<link href="../swiper/jquery-ui.css" media="screen" rel="stylesheet">    
 	<script src="http://www.meyer-law.ru/core/js/jqueryui/jquery-ui.js" type="text/javascript"></script>
 
 	<script type="text/javascript">
@@ -210,6 +207,8 @@
 
 		});
 	</script>
+
+	
 	<style>
 		ul,
 		ol {
@@ -799,23 +798,23 @@
 				<div class="columns-md-10">
 					<ul class="rectangle">
 						<div class="col-md-5">
-							<li><a href="javascript:;">Салехард</a></li>
-							<li><a href="javascript:;">Тюмень</a></li>
-							<li><a href="javascript:;">Благовещенск</a></li>
-							<li><a href="javascript:;">Крымск</a></li>
-							<li><a href="javascript:;">Ейск</a></li>
-							<li><a href="javascript:;">Волгоград</a></li>
-							<li><a href="javascript:;">Саратов</a></li>
-							<li><a href="javascript:;">Казань</a></li>
+							<li><a href="javascript:;" id="ya" class="focus-region">Салехард</a></li>
+							<li><a href="javascript:;" id="ht" class="focus-region">Тюмень</a></li>
+							<li><a href="javascript:;" id="am" class="focus-region">Благовещенск</a></li>
+							<li><a href="javascript:;" id="ks" class="focus-region">Крымск</a></li>
+							<li><a href="javascript:;" id="es" class="focus-region">Ейск</a></li>
+							<li><a href="javascript:;" id="vl" class="focus-region">Волгоград</a></li>
+							<li><a href="javascript:;" id="sr" class="focus-region">Саратов</a></li>
+							<li><a href="javascript:;" id="ta"  class="focus-region">Казань</a></li>
 						</div>
 						<div class="col-md-5">
-							<li><a href="javascript:;">Астрахань</a></li>
-							<li><a href="javascript:;">Воронеж</a></li>
-							<li><a href="javascript:;">Липецк</a></li>
-							<li><a href="javascript:;">Орёл</a></li>
-							<li><a href="javascript:;">Майкоп</a></li>
-							<li><a href="javascript:;">Москва</a></li>
-							<li><a href="javascript:;">Санкт-Петербург</a></li>
+							<li><a href="javascript:;" id="as" class="focus-region">Астрахань</a></li>
+							<li><a href="javascript:;" id="vn" class="focus-region">Воронеж</a></li>
+							<li><a href="javascript:;" id="lp" class="focus-region">Липецк</a></li>
+							<li><a href="javascript:;" id="or" class="focus-region">Орёл</a></li>
+							<li><a href="javascript:;" id="ad" class="focus-region">Майкоп</a></li>
+							<li><a href="javascript:;" id="mc" class="focus-region">Москва</a></li>
+							<li><a href="javascript:;" id="le" class="focus-region">Санкт-Петербург</a></li>
 
 
 						</div>
@@ -824,6 +823,25 @@
 			</div>
 		</div>
 	</section>
+
+
+	<script>
+		jQuery(function($) {
+			 $('.focus-region').on('click',function(){
+				var reg=$(this).attr("id");	
+				
+				$('#region_'+reg).dialog({
+							width:'90%',
+							modal:'true',
+							height:'450', 
+							show: {
+									effect: "explode",
+									duration: 1000
+						}});
+			 });
+		});
+		</script>
+
 
 
 	<footer>
@@ -950,48 +968,9 @@
 	  </div>
 
 
-	<script>
-		jQuery(function ($) {
-			function stickyload() {
-				$('.sticky')
-					.on("sticky_kit:bottom", function (e) {
-						$(this).parent().css('position', 'static');
-					})
-					.on("sticky_kit:unbottom", function (e) {
-						$(this).parent().css('position', 'relative');
-					});
-			}
-
-			var winWidth = $(window).width();
-
-			if (winWidth > 992) {
-
-				$(".sticky").stick_in_parent({
-					parent: '.sticky-wrapper',
-					offset_top: 20,
-					bottoming: true
-				});
-				stickyload();
-
-			}
-			$(window).resize(function () {
-				var winWidth = $(window).width();
-				if (winWidth < 992) {
-					$(".sticky").trigger("sticky_kit:detach");
-				} else {
-					$(".sticky").stick_in_parent({
-						parent: '.sticky-wrapper',
-						offset_top: 20
-					});
-				}
-			});
 
 
-			$('#h_menu_main').removeClass('active');
-
-			$('#h_menu_expa').addClass('active');
-		});
-	</script>
+	  <script src="http://www.meyer-law.ru/core/views/meyer/js/bootstrap.min.js"></script>
 
 </body>
 
