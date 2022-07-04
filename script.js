@@ -8,6 +8,10 @@ new Swiper('.image_swiper',
         prevEl: '.swiper-button-prev'
     },
 
+    pagination: {
+        el: '.swiper-pagination',
+      },
+
     observer: true,
 
     observeParents: true,
