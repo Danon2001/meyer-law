@@ -4,5 +4,27 @@
 {
     color: #fff;
     font-size: 50px;
+    
 
+}
+
+.news::before
+{
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 30%;
+    width: 100%;
+    background-color: #ab2b3b;
+    float: left;
+    opacity: 0;
+    z-index: -1;
+    transition: all 0.5s linear;
+}
+
+.news:hover::before
+{
+    height: 100%;
+    opacity: 1;
 }

@@ -1,0 +1,223 @@
+.masonry{
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.masonryItem{
+    position: absolute;
+    overflow: hidden;
+}
+
+.masonryCover{
+    width: 100%;
+    height: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    transform: scale(0) translate3d(0,0,0);
+    opacity: 0;
+    transition: all 1s;
+}
+
+.masonryImage{
+    display: none;
+}
+
+.masonryActive .masonryCover {
+    opacity: 1;
+    transform: scale(1) translate3d(0,0,0);
+}
+
+
+
+
+
+<section class="cp-gallery mt-24">
+<div class="container mx-auto">
+    <div class="page">
+    <div class="masonry" id="masonry">
+        <div class="masonryItem" data-width="800" data-heigth="1132">
+            <div class="masonryCover" style="background-image: url(../img/diplom-chambers.jpg);">
+            </div>
+            <img class="masonryImage" src="../img/diplom-chambers.jpg" alt="img">
+        </div>
+        <div class="masonryItem" data-width="800" data-heigth="1132">
+            <div class="masonryCover" style="background-image: url(../img/gramota-sportvoblago-2019.jpg);">
+            </div>
+            <img class="masonryImage" src="../img/gramota-sportvoblago-2019.jpg" alt="img">
+        </div>
+        <div class="masonryItem" data-width="800" data-heigth="1132">
+            <div class="masonryCover" style="background-image: url(../img/fond-podari-otziv.jpg);">
+            </div>
+            <img class="masonryImage" src="../img/fond-podari-otziv.jpg" alt="img">
+        </div>
+        <div class="masonryItem" data-width="800" data-heigth="535">
+            <div class="masonryCover" style="background-image: url(../img/reiting_top_300_1_2017.jpg);">
+            </div>
+            <img class="masonryImage" src="../img/reiting_top_300_1_2017.jpg" alt="img">
+        </div>
+
+    </div>
+</div>
+
+</div>
+</section>
+
+
+
+
+
+<section class="cp-gallery mt-24">
+<div class="container mx-auto">
+    <div class="grid">
+
+        <div class="grid-item frame">
+            <div class="cp-box">
+                <div class="frame"> <img src="../img/diplom-chambers.jpg" alt="img">
+                    <div class="caption"> <a href="../img/diplom-chambers.jpg" data-rel="prettyPhoto[]"
+                            class="zoom" rel="prettyPhoto[]"><i class="fas fa-search-plus"></i></a> </div>
+                </div>
+            </div>
+        </div>
+        <div class="grid-item grid-item--width2 frame">
+            <div class="cp-box">
+                <div class="frame"> <img src="../img/gramota-sportvoblago-2019.jpg" alt="img">
+                    <div class="caption"> <a href="../img/gramota-sportvoblago-2019.jpg"
+                            data-rel="prettyPhoto[]" class="zoom" rel="prettyPhoto[]"><i
+                                class="fas fa-search-plus"></i></a> </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="grid-item grid-item--width2 frame">
+            <div class="cp-box">
+                <div class="frame"> <img src="../img/fond-podari-otziv.jpg" alt="img">
+                    <div class="caption"> <a href="../img/fond-podari-otziv.jpg" data-rel="prettyPhoto[]"
+                            class="zoom" rel="prettyPhoto[]"><i class="fas fa-search-plus"></i></a> </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="grid-item grid-item--width3 frame">
+            <div class="cp-box">
+                <div class="frame"> <img src="../img/reiting_top_300_1_2017.jpg" alt="img">
+                    <div class="caption"> <a href="../img/reiting_top_300_1_2017.jpg" data-rel="prettyPhoto[]"
+                            class="zoom" rel="prettyPhoto[]"><i class="fas fa-search-plus"></i></a> </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="grid-item grid-item--width3 frame">
+            <div class="cp-box">
+                <div class="frame"> <img src="../img/reiting_top_300_2_2017.jpg" alt="img">
+                    <div class="caption"> <a href="../img/reiting_top_300_2_2017.jpg" data-rel="prettyPhoto[]"
+                            class="zoom" rel="prettyPhoto[]"><i class="fas fa-search-plus"></i></a> </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="grid-item grid-item--width2 frame">
+            <div class="cp-box">
+                <div class="frame"> <img src="../img/gramoti-2.jpg" alt="img">
+                    <div class="caption"> <a href="../img/gramoti-2.jpg" data-rel="prettyPhoto[]" class="zoom"
+                            rel="prettyPhoto[]"><i class="fas fa-search-plus"></i></a> </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item grid-item--width3 frame">
+            <div class="cp-box">
+                <div class="frame"> <img src="../img/diplom-pravo.jpg" alt="img">
+                    <div class="caption"> <a href="../img/diplom-pravo.jpg" data-rel="prettyPhoto[]"
+                            class="zoom" rel="prettyPhoto[]"><i class="fas fa-search-plus"></i></a> </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item grid-item--width2 frame">
+            <div class="cp-box">
+                <div class="frame"> <img src="../img/agm-meyer.jpg" alt="img">
+                    <div class="caption"> <a href="../img/agm-meyer.jpg" data-rel="prettyPhoto[]" class="zoom"
+                            rel="prettyPhoto[]"><i class="fas fa-search-plus"></i></a> </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item grid-item--width2 frame">
+            <div class="cp-box">
+                <div class="frame"> <img src="../img/apvo.jpg" alt="img">
+                    <div class="caption"> <a href="../img/apvo.jpg" data-rel="prettyPhoto[]" class="zoom"
+                            rel="prettyPhoto[]"><i class="fas fa-search-plus"></i></a> </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item grid-item--width2 frame">
+            <div class="cp-box">
+                <div class="frame"> <img src="../img/blago-auto.jpg" alt="img">
+                    <div class="caption"> <a href="../img/blago-auto.jpg" data-rel="prettyPhoto[]" class="zoom"
+                            rel="prettyPhoto[]"><i class="fas fa-search-plus"></i></a> </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item grid-item--width2 frame">
+            <div class="cp-box">
+                <div class="frame"> <img src="../img/blago-meyer.jpg" alt="img">
+                    <div class="caption"> <a href="../img/blago-meyer.jpg" data-rel="prettyPhoto[]" class="zoom"
+                            rel="prettyPhoto[]"><i class="fas fa-search-plus"></i></a> </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item grid-item--width2 frame">
+            <div class="cp-box">
+                <div class="frame"> <img src="../img/delov-rus.jpg" alt="img">
+                    <div class="caption"> <a href="../img/delov-rus.jpg" data-rel="prettyPhoto[]" class="zoom"
+                            rel="prettyPhoto[]"><i class="fas fa-search-plus"></i></a> </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item grid-item--width2 frame">
+            <div class="cp-box">
+                <div class="frame"> <img src="../img/er-meip.jpg" alt="img">
+                    <div class="caption"> <a href="../img/er-meip.jpg" data-rel="prettyPhoto[]" class="zoom"
+                            rel="prettyPhoto[]"><i class="fas fa-search-plus"></i></a> </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item grid-item--width2 frame">
+            <div class="cp-box">
+                <div class="frame"> <img src="../img/kudo.jpg" alt="img">
+                    <div class="caption"> <a href="../img/kudo.jpg" data-rel="prettyPhoto[]" class="zoom"
+                            rel="prettyPhoto[]"><i class="fas fa-search-plus"></i></a> </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item grid-item--width2 frame">
+            <div class="cp-box">
+                <div class="frame"> <img src="../img/sberbank.jpg" alt="img">
+                    <div class="caption"> <a href="../img/sberbank.jpg" data-rel="prettyPhoto[]" class="zoom"
+                            rel="prettyPhoto[]"><i class="fas fa-search-plus"></i></a> </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="grid-item grid-item--width2 frame">
+            <div class="cp-box">
+                <div class="frame"> <img src="../img/sberbank2.jpg" alt="img">
+                    <div class="caption"> <a href="../img/sberbank2.jpg" data-rel="prettyPhoto[]" class="zoom"
+                            rel="prettyPhoto[]"><i class="fas fa-search-plus"></i></a> </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
