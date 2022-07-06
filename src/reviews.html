@@ -14,9 +14,11 @@
     <link rel="stylesheet" href="../swiper/tailwind.css">
     <link rel="stylesheet" href="../swiper/custom.css">
     <link rel="stylesheet" href="../masonry/masonry.pkgd.css">
+    <link rel="stylesheet" href="../swiper/color.css">
+    <link href="../swiper/responsive.css" rel="stylesheet" type="text/css">
 
 
-
+    <script src="../swiper/jquery-1.11.3.min.js"></script>
 </head>
 
 <body class="flex flex-col bg-gray-200">
@@ -111,6 +113,46 @@
     </header>
 
 
+
+    <script>
+        jQuery(function($) {
+            
+        $('.cp-box').on('click',function(){
+            var ahref=$(this).find('.zoom');
+            ahref.click();
+        });
+            
+            $(window).on('load', function () {
+        
+        
+        if ($(".cp-gallery-metro-1 .isotope").length) {
+                var $container = $('.cp-gallery-metro-1 .isotope');
+                $container.isotope({
+                    itemSelector: '.item',
+        
+                    masonry: {
+                        columnWidth: $container.width() / 12
+        
+                    },
+                    layoutMode: 'masonry'
+                });
+                $(window).resize(function() {
+                    $container.isotope({
+                        masonry: {
+                            columnWidth: $container.width() / 12
+                        }
+                    });
+                });
+            }
+            
+            });
+        });
+        </script>
+
+
+
+
+
     <div id="inner-banner">
         <div class="container mx-auto">
             <h1 class="flex justify-center">
@@ -123,6 +165,7 @@
             </ol>
         </div>
     </div>
+
 
 
 
@@ -462,12 +505,10 @@
     </div>
 
 
+    <script src="../swiper/tailwind.js"></script>
     <script src="../masonry/masonry.pkgd.js"></script>
     <script src="../masonry/index.js"></script>
     <script src="../masonry/masonry.js"></script>
-
-
-
 
 </body>
 
