@@ -502,12 +502,33 @@ Ensure the default browser behavior of the `hidden` attribute.
   }
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+.static {
+  position: static;
+}
+
 .fixed {
   position: fixed;
 }
 
 .relative {
   position: relative;
+}
+
+.sticky {
+  position: -webkit-sticky;
+  position: sticky;
 }
 
 .inset-0 {
@@ -531,6 +552,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 
 .z-\[11\] {
   z-index: 11;
+}
+
+.m-8 {
+  margin: 2rem;
 }
 
 .mx-auto {
@@ -704,6 +729,54 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-top: 1rem;
 }
 
+.-mt-60 {
+  margin-top: -15rem;
+}
+
+.-mt-96 {
+  margin-top: -24rem;
+}
+
+.ml-32 {
+  margin-left: 8rem;
+}
+
+.ml-40 {
+  margin-left: 10rem;
+}
+
+.ml-64 {
+  margin-left: 16rem;
+}
+
+.-mt-36 {
+  margin-top: -9rem;
+}
+
+.-mt-40 {
+  margin-top: -10rem;
+}
+
+.ml-80 {
+  margin-left: 20rem;
+}
+
+.ml-\[300px\] {
+  margin-left: 300px;
+}
+
+.ml-\[200px\] {
+  margin-left: 200px;
+}
+
+.ml-\[190px\] {
+  margin-left: 190px;
+}
+
+.mt-60 {
+  margin-top: 15rem;
+}
+
 .inline-block {
   display: inline-block;
 }
@@ -752,12 +825,24 @@ Ensure the default browser behavior of the `hidden` attribute.
   width: 9rem;
 }
 
+.w-12 {
+  width: 3rem;
+}
+
+.flex-1 {
+  flex: 1 1 0%;
+}
+
 .grow {
   flex-grow: 1;
 }
 
 .transform {
   transform: translate(var(--tw-translate-x), var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y));
+}
+
+.resize {
+  resize: both;
 }
 
 .list-disc {
@@ -956,6 +1041,16 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
+}
+
+.py-16 {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.py-1 {
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
 }
 
 .pl-4 {
@@ -1276,4 +1371,82 @@ Ensure the default browser behavior of the `hidden` attribute.
 .focus\:outline-none:focus {
   outline: 2px solid transparent;
   outline-offset: 2px;
+}
+
+@media (min-width: 640px) {
+  .sm\:container {
+    width: 100%;
+  }
+
+  @media (min-width: 640px) {
+    .sm\:container {
+      max-width: 640px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    .sm\:container {
+      max-width: 768px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .sm\:container {
+      max-width: 1024px;
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .sm\:container {
+      max-width: 1280px;
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .sm\:container {
+      max-width: 1536px;
+    }
+  }
+
+  .sm\:relative {
+    position: relative;
+  }
+
+  .sm\:ml-\[330px\] {
+    margin-left: 330px;
+  }
+
+  .sm\:-mt-\[160px\] {
+    margin-top: -160px;
+  }
+
+  .sm\:ml-72 {
+    margin-left: 18rem;
+  }
+
+  .sm\:-mt-52 {
+    margin-top: -13rem;
+  }
+
+  .sm\:whitespace-nowrap {
+    white-space: nowrap;
+  }
+
+  .sm\:py-4 {
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .sm\:py-3 {
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+  .sm\:pl-4 {
+    padding-left: 1rem;
+  }
+
+  .sm\:indent-7 {
+    text-indent: 1.75rem;
+  }
 }
