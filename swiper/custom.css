@@ -58,7 +58,7 @@
 #search_inp:-moz-placeholder {color:#c7c7c7}
 a{outline:none!important}
 body {
-    background: url(../images/fon.jpg);
+    background: url(../img/fon.jpg); 
     background-size: cover; /*100% 100%*/
     background-repeat: no-repeat;
     font: 12px/12px 'Futuris', arial sans-serif;
@@ -1762,7 +1762,7 @@ strong.burger-logo a {
 .cp-consultation {
     float: left;
     width: 100%;
-    background-image: url(../images/consultation-img.jpg);
+    background-image: url(../img/consultation-img.jpg);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -1770,7 +1770,7 @@ strong.burger-logo a {
     position: relative;
 }
 .cp-theme-style-1 .cp-consultation-section {
-    background-image: url(../images/consultation-bg.jpg);
+    background-image: url(../img/consultation-bg.jpg);
     margin: 60px 0 70px 0;
     position: relative;
 }
@@ -3124,7 +3124,7 @@ textarea::-webkit-input-placeholder {
 .testimonials-style-2 {
     float: left;
     width: 100%;
-    background-image: url(../images/testimonials-bg.png);
+    background-image: url(../img/testimonials-bg.png);
     background-repeat: no-repeat;
     background-position: center top;
     background-size: cover;
@@ -3687,7 +3687,7 @@ textarea::-webkit-input-placeholder {
     font: 24px 'Futura PT Medium', arial sans-serif;
     text-align: left;
     width: 100%;
-    background: url(../images/fon-1.png);
+    background: url(../img/fon-1.png);
     background-repeat: repeat;
 }
 .cp-sidebar-box form {
@@ -4487,7 +4487,7 @@ textarea::-webkit-input-placeholder {
     float: left;
     width: 100%;
 	min-height: 303px;
-    background: url(../images/fon-1.png);
+    background: url(../img/fon-1.png);
     background-repeat: repeat;
     padding: 0 0 30px 98px;
     box-sizing: border-box;
@@ -4564,7 +4564,7 @@ textarea::-webkit-input-placeholder {
     color: #fff;
     text-decoration: none;
 }
-.background{background-image: url(../images/fon-2.png);
+.background{background-image: url(../img/fon-2.png);
     background-repeat: repeat;}
 .background a{	
 	transition: all 0.5s ease 0s;
@@ -5158,7 +5158,7 @@ code {
     position: absolute;
     left: 37%;
     top: 25%;
-    background: url('/core/views/meyer/images/spinner.gif') no-repeat 50% 50%;
+    background: url('/core/views/meyer/img/spinner.gif') no-repeat 50% 50%;
 }
 .col-md-3.foot-col-3 {
 	width: 30%;
@@ -5191,12 +5191,12 @@ code {
 	text-decoration: underline;
 }
 .team-page-bg-new {
-	background-image: url(../images/fon-2.png);
+	background-image: url(../img/fon-2.png);
     background-repeat: repeat;
 	margin-bottom: 30px;
 }
 .news-page-bg-new {
-	background-image: url(../images/fon-2.png);
+	background-image: url(../img/fon-2.png);
     background-repeat: repeat;
 	margin-bottom: 30px;
 }
@@ -5226,7 +5226,7 @@ code {
 	font: 400 28px/28px 'Futura PT Medium', arial sans-serif;
 }
 .contact-page-bg-new {
-	background-image: url(../images/fon-2.png);
+	background-image: url(../img/fon-2.png);
     background-repeat: repeat;
 	margin-bottom: 30px;
 }
@@ -5261,17 +5261,17 @@ code {
 	color: #2B2727;
 }
 .news-page-bg-new {
-	background-image: url(../images/fon-2.png);
+	background-image: url(../img/fon-2.png);
     background-repeat: repeat;
 	margin-bottom: 30px;
 }
 .practice-page-bg-new {
-	background-image: url(../images/fon-2.png);
+	background-image: url(../img/fon-2.png);
     background-repeat: repeat;
 	margin-bottom: 30px;
 }
 .map-page-bg-new {
-	background-image: url(../images/fon-2.png);
+	background-image: url(../img/fon-2.png);
     background-repeat: repeat;
 	margin-bottom: 30px;
 }
@@ -5347,6 +5347,7 @@ input,button,textarea{outline:none;}
     transition: all 0.5s ease-in;
     -moz-transition: all 0.5s ease-in;
     -webkit-transition: all 0.5s ease-in;
+	font-size: 14px;
 }
 .link-facebook:hover {
 	color: #ab2b3a !important;
@@ -5376,3 +5377,4 @@ input,button,textarea{outline:none;}
 	margin-top:10px;
 	margin-bottom:30px;
 }
+
