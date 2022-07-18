@@ -5378,3 +5378,14 @@ input,button,textarea{outline:none;}
 	margin-bottom:30px;
 }
 
+#main_1 {
+    float: left;
+    width: 100%;
+	background-color: #b7b7b3;
+}
+
+#main_2 {
+    float: left;
+    width: 100%;
+	background-color: #c5c6c3;
+}
