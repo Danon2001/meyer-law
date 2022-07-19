@@ -7,7 +7,8 @@ module.exports = {
       'Raleway': ['Raleway', 'sans-serif'],
       'OpenSans': ['Open Sans', 'sans-serif'],
       'PTSerif': ['PT Serif', 'serif'],
-      "Helvetica": ['Helvetica,Arial','sans-serif']
+      "Helvetica": ['Helvetica,Arial','sans-serif'],
+      'Futura': ['Futura PT Medium', 'arial sans-serif']
     },
   },
   plugins: [],

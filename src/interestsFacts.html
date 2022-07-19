@@ -9,536 +9,306 @@
 
     <link href="../dist/output.css" rel="stylesheet">
     <link href="../script.css" rel="stylesheet">
-    <link href="../fontawesome-free-5.15.4-web/css/all.css" rel="stylesheet">
+    <link href="../swiper/font-awesome.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../swiper/tailwind.css">
+    <link rel="stylesheet" href="../swiper/swiper-bundle.min.css">
     <link rel="stylesheet" href="../swiper/custom.css">
     <link rel="stylesheet" href="../swiper/color.css">
     <link href="../swiper/responsive.css" rel="stylesheet" type="text/css">
-
 
     <script src="../swiper/jquery-1.11.3.min.js"></script>
 
 </head>
 
-<body class="flex flex-col bg-gray-200">
-    <header inset-0 h-12>
-        <section class="cp-head-topbar">
-          <div class="container mx-auto">
-            <div class="flex flex-row">
-              <div class="left-box">
-                <ul>
-                  <li><i class="fas fa-phone-alt"></i> <a href="tel:+7 8442 97 82 97" class="font-serif">(8442) 97-82-97</a>
-                  </li>
-                  <li>
-                    <a href="tel:+7 8442 97-84-97">(8442) 97-84-97</a>
-                  </li>
-                  <li><i class="fas fa-envelope"></i> <a href="mailto:info@meyer-law.ru"
-                      class="font-serif">info@meyer-law.ru</a></li>
-                </ul>
-              </div>
-              <div class="right-box">
-                <ul>
-                  <li><i class="fas fa-map-marker-alt font-serif"></i> 400001, г. Волгоград, ул. Профсоюзная,
-                    15а</li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </section>
-    
-    
-        <div class="container mx-auto"> <strong class="logo"><a href="index.html"><img src="../img/logo.png"
-                alt="img"></a></strong>
-          <div class="navigation-right whitespace-nowrap">
-            <div class="burger">
-                <nav class="navbar navbar-inverse">
-                  <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                      aria-expanded="false" aria-controls="navbar">
-                      <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
-                        class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                  </div>
-                  <div id="navbar" class="collapse navbar-collapse">
-            <ul class="flex space-x-0">
-              <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
-                 transition ease-in duration-300 hover:no-underline hover:text-gray-600" href="index.html">
-                    О нас
-                </a></li>
-              <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
-                 transition ease-in duration-300 hover:no-underline hover:text-gray-600" href="ourSkill.html">
-                    Наш опыт
-                </a>
-              </li>
-              <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
-                 transition ease-in duration-300 hover:no-underline hover:text-gray-600" href="news.html">
-                    Новости
-                </a></li>
-              <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-slate-800 hover:border-slate-800
-                 transition ease-in duration-300 hover:no-underline hover:text-gray-600" href="interestsFacts.html">
-                    Интересные
-                    факты
-                </a></li>
-              <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
-                 transition ease-in duration-300 hover:no-underline hover:text-gray-600" href="search.html">
-                    Поиск
-                </a>
-              </li>
-            </ul>
-            <ul class="flex space-x-0">
-              <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
-                 transition ease-in duration-300 hover:no-underline hover:text-gray-600" href="proBono.html">
-                    Pro bono
-                </a></li>
-              <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
-                 transition ease-in duration-300 hover:no-underline hover:text-gray-600" href="reviews.html">
-                    Отзывы
-                </a></li>
-              <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
-                 transition ease-in duration-300 hover:no-underline hover:text-gray-600" href="conkursMayera.html">
-                 Конкурс «Мейера»
-                </a></li>
-              <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
-                 transition ease-in duration-300 hover:no-underline hover:text-gray-600" href="contacts.html">
-                    Контакты
-                </a></li>
-            </ul>
-                  </div>
-                </nav>
-          </div>
-        </div>
-      </header>
+<body class="flex flex-col cp-theme-style-1">
+	<div class="wrapper">
+		<header inset-0 h-12 id="header">
+			<section class="cp-head-topbar">
+				<div class="container mx-auto">
+					<div class="row">
+						<div class="col-md-6">
+							<div class="left-box">
+								<ul>
+									<li><i class="fa fa-phone"></i> <a href="tel:+7 8442 97 82 97"
+											>(8442) 97-82-97</a>
+									</li>
+									<li>
+										<a href="tel:+7 8442 97-84-97">(8442) 97-84-97</a>
+									</li>
+									<li><i class="fa fa-envelope"></i> <a href="mailto:info@meyer-law.ru"
+											>info@meyer-law.ru</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="col-md-6">
+							<div class="right-box">
+								<ul>
+									<li><i class="fa fa-map-marker"></i> 400001, г. Волгоград, ул. Профсоюзная,
+										15а</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="cp-navigation-sectio">
+				<div class="container mx-auto">
+					<div class="row">
+						<div class="col-md-5">
+							<strong class="logo" text-center><a href="index.html"><img src="../img/logo.png"
+										alt="img"></a>
+							</strong>
+						</div>
+						<div class="col-md-7">
+							<div class="navigation-right">
+								<div class="cp-burger-nav">
+									<nav class="navbar navbar-inverse">
+										<div class="navbar-header">
+											<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
+											aria-expanded="false" aria-controls="navbar">
+												<span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+												class="icon-bar"></span> <span class="icon-bar"></span> </button>
+										</div>
+										<div id="navbar" class="collapse navbar-collapse">
+											<div style="display:none;">
+											</div>
+											<ul id="nav" class="navbar-nav navbar-nav-first">
+												<li><a href="index.html">
+													О нас
+													</a>
+												</li>
+												<li><a href="ourSkill.html">
+													Наш опыт
+													</a>
+												</li>
+												<li><a class="" href="news.html">
+													Новости
+													</a>
+												</li>
+												<li class="active"><a href="interestsFacts.html">
+													Интересные
+													факты
+													</a>
+												</li>
+												<li><a href="search.html">
+													Поиск
+													</a>
+												</li>
+											</ul>
+											<ul id="nav" class="navbar-nav navbar-nav-second">
+												<li><a href="proBono.html">
+														Pro bono
+													</a>
+												</li>
+												<li><a href="reviews.html">
+														Отзывы
+													</a>
+												</li>
+												<li><a href="conkursMayera.html">
+														Конкурс «Мейера»
+													</a>
+												</li>
+												<li><a href="contacts.html">
+														Контакты
+													</a>
+												</li>
+											</ul>
+										</div>
+									</nav>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+		</header>
 
+		<div class="sticky-wrapper">
+			<div id="inner-banner">
+				<div class="container mx-auto">
+					<h1 class="flex justify-center">
+							Интересные факты
+					</h1>
+					<ol class="breadcrumb">
+						<li><a href="index.html">Главная</a></li>
+						<li class="active">Интересные факты</li>
+					</ol>
+				</div>
+			</div>
 
-    <div id="inner-banner">
-        <div class="container mx-auto">
-            <h1 class="flex justify-center">
-                <p class="font-serif text-6xl text-white font-semibold">
-                    Интересные факты</p>
-            </h1>
-            <ol class="breadcrumb">
-                <li><a href="index.html">Главная</a></li>
-                <li>Интересные факты</li>
-            </ol>
-        </div>
-    </div>
+			<div id="main_2">
+				<section class="cp-blog padding-top-60 news-page-bg-new">
+					<div class="container mx-auto space-y-12">
+						<p>
+							В данном разделе мы размещаем информацию, которая не имеет прямого отношения к деятельности &laquo;Мейер
+							и партнеры&raquo;,
+							но является интересной, касается истории нашего города или необычных фактов из истории юриспруденции.
+							Если
+							внимательно изучать историческое прошлое, то нельзя не заметить сходства событий и процессов, которые
+							произошли
+							в разные времена. Команда &laquo;Мейер и партнеры&raquo;, позиционируя себя в сфере несостоятельности
+							(банкротства), обращает
+							внимание на любопытные исторические факты и литературные произведения, в которых тема банкротства
+							показана так,
+							как будто события произошли не много лет назад, а в наше время.
+						</p>
+						<div style="height:1px; display:block;"></div>
+						<div class="col-md-12">
+							<div class="cp-tweet-box">
+								<div class="row">
+									<div class="col-md-5">
+										<div class="frame" style="cursor:pointer;" onclick="location='http://www.meyer-law.ru/news/295';">
+											<img src="../img/anounce_d1aea1b1605890e785822157dc78a7cb.jpg">
+											<a href="http://www.meyer-law.ru/news/295" class="link">
+												<i class="fa fa-link"></i>
+											</a>
+										</div>
+									</div>
+									<div class="col-md-7">
+										<div class="cp-text-box">
+											<h3><a href="http://www.meyer-law.ru/news/295">Дело купца Голдобина</a></h3>
+											<div class="detail-row">
+												<ul>
+													<li>12.08.2016 </li>
+												</ul>
+											</div>
+											<p></p>
+											<p>
+												17 января 1909 года один из царицынских банков обратился к купеческому старосте
+												Царицына,
+												члену банковских учётных комитетов, члену биржевого общества, лесопромышленнику и
+												крупному
+												домовладельцу Семёну Савельевичу Голдобину с требованием погасить находящийся в
+												распоряжении
+												банка голдобинский вексель.
+											</p>
+											<p></p>
+											<br>
+											<a class="btn-style-1" href="http://www.meyer-law.ru/news/295">Читать новость...</a>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
 
+			<footer>
+				<section class="cp-footer-content">
+					<div class="container-fluid container">
+						<div class="row">
+							<div class="footer-reward">
+								<div class="col-md-3 col-sm-3">
+									<div class="col-md-6 col-sm-6 col-xs-6">
+										<img class="footer-reward-left-img" src="../img/brand-1.png">
+									</div>
+									<div class="col-md-6 col-sm-6 col-xs-6">
+										<img class="footer-reward-right-img" src="../img/brand-2.png">
+									</div>
+									<div class="col-md-12 col-sm-6">
+										<img src="../img/brand-3.png">
+										<div style="clear: both;"></div>
+									</div>
+								</div>
+							</div>
 
-    <section>
-        <div class="container mx-auto mt-32 space-y-12">
-            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">
-                В данном разделе мы размещаем информацию, которая не имеет прямого отношения к деятельности &laquo;Мейер
-                и партнеры&raquo;,
-                но является интересной, касается истории нашего города или необычных фактов из истории юриспруденции.
-                Если
-                внимательно изучать историческое прошлое, то нельзя не заметить сходства событий и процессов, которые
-                произошли
-                в разные времена. Команда &laquo;Мейер и партнеры&raquo;, позиционируя себя в сфере несостоятельности
-                (банкротства), обращает
-                внимание на любопытные исторические факты и литературные произведения, в которых тема банкротства
-                показана так,
-                как будто события произошли не много лет назад, а в наше время.
-            </p>
-            <br>
-            <div class="columns-md-8">
-                <div class="flex flex-col space-y-12 lg:flex lg:flex-row lg:space-x-12">
-                    <div class="columns-md-5">
-                        <div class="w-[340px] sm:w-[560px] md:w-[700px] lg:w-[410px]">
-                            <div class="frame" style="cursor:pointer;" onclick="location='http://www.meyer-law.ru/news/295';">
-                            <a href="http://www.meyer-law.ru/news/295">
-                                <img
-                                    src="../img/anounce_d1aea1b1605890e785822157dc78a7cb.jpg">
-                            </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full">
-                        <h3><a class="font-serif text-4xl text-white font-semibold hover:text-black hover:no-underline hover:transition ease-in-out
-                                    duration-300" href="http://www.meyer-law.ru/news/295">Дело купца Голдобина</a></h3>
-                        <div class="font-sans text-2xl text-black font-semibold tracking-wide ml-6">
-                            <ul>
-                                <li>12.08.2016 </li>
-                            </ul>
-                        </div>
-                        <p>
-                            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">
-                                17 января 1909 года один из царицынских банков обратился к купеческому старосте
-                                Царицына,
-                                члену банковских учётных комитетов, члену биржевого общества, лесопромышленнику и
-                                крупному
-                                домовладельцу Семёну Савельевичу Голдобину с требованием погасить находящийся в
-                                распоряжении
-                                банка голдобинский вексель.</p>
-                        </p>
-                        <br>
-                        <div class="bg-white py-4" style="width: 151px;">
-                        <a class="news relative z-[11] text-center uppercase text-gray-500 font-semibold hover:text-white hover:no-underline
-                                hover:border-white py-3 px-5 border-2 border-white transition delay-150
-                                 duration-700" href="http://www.meyer-law.ru/news/295">Читать новость...</a>
-                                </div>
-                    </div>
-                </div>
-            </div>
-            <div class="columns-md-12">
-                <div class="flex flex-col space-y-12 lg:flex lg:flex-row lg:space-x-12">
-                    <div class="columns-md-5">
-                        <div class="w-[340px] sm:w-[560px] md:w-[700px] lg:w-[410px]">
-                            <div class="frame" style="cursor:pointer;" onclick="location='http://www.meyer-law.ru/news/296';">
-                            <a href="http://www.meyer-law.ru/news/296">
-                                <img
-                                    src="../img/anounce_8d5bc3266789c99721e57a1a7687d163.jpg">
-                            </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full">
-                        <h3><a class="font-serif text-4xl text-white font-semibold hover:text-black hover:no-underline hover:transition ease-in-out
-                                duration-300" href="http://www.meyer-law.ru/news/296">Свои люди — сочтёмся!</a>
-                        </h3>
-                        <div class="font-sans text-2xl text-black font-semibold tracking-wide ml-6">
-                            <ul>
-                                <li>12.08.2016 </li>
-                            </ul>
-                        </div>
-                        <p>
-                            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">
-                                Пьеса, 1850 год</p>
-                        </p>
-                        <br>
-                        <div class="bg-white py-4" style="width: 151px;">
-                        <a class="news relative z-[11] text-center uppercase text-gray-500 font-semibold hover:text-white hover:no-underline
-                            hover:border-white py-3 px-5 border-2 border-white transition delay-150
-                             duration-700" href="http://www.meyer-law.ru/news/296">Читать новость...</a>
-                            </div>
-                    </div>
-                </div>
-            </div>
-            <div class="columns-md-12">
-                <div class="flex flex-col space-y-12 lg:flex lg:flex-row lg:space-x-12">
-                    <div class="columns-md-5">
-                        <div class="w-[340px] sm:w-[560px] md:w-[700px] lg:w-[410px]">
-                            <div class="frame" style="cursor:pointer;" onclick="location='biroto.html';">
-                            <a href="biroto.html">
-                                <img src="../img/anounce_26a226bde764cf571dd532e1a9ca9c29.jpg"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full">
-                        <h3><a class="font-serif text-4xl text-white font-semibold hover:text-black hover:no-underline hover:transition ease-in-out
-                            duration-300" href="biroto.html">&laquo;История величия и падения Цезаря Бирото&raquo;</a></h3>
-                        <div class="font-sans text-2xl text-black font-semibold tracking-wide ml-6">
-                            <ul>
-                                <li>12.08.2016 </li>
-                            </ul>
-                        </div>
-                        <p>
-                            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">
-                                Роман издан в 1837г. Он занимает важное место в общей системе &laquo;Человеческой комедии&raquo;
-                                и в силу значительности поставленных в нем проблем, и вследствие того, что он связан с 
-                                целым рядом произведений Бальзака: многие действующие лица этого романа встречаются 
-                                и в других произведениях писателя.</p>
-                        </p>
-                        <br>
-                        <div class="bg-white py-4" style="width: 151px;">
-                        <a class="news relative z-[11] text-center uppercase text-gray-500 font-semibold hover:text-white hover:no-underline
-                        hover:border-white py-3 px-5 border-2 border-white transition delay-150
-                         duration-700" href="biroto.html">Читать новость...</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="columns-md-12">
-                <div class="flex flex-col space-y-12 lg:flex lg:flex-row lg:space-x-12">
-                    <div class="columns-md-5">
-                        <div class="w-[340px] sm:w-[560px] md:w-[700px] lg:w-[410px]">
-                            <div class="frame" style="cursor:pointer;" onclick="location='http://www.meyer-law.ru/news/309';">
-                            <a href="http://www.meyer-law.ru/news/309">
-                                <img src="../img/anounce_5c2e2fe8d109cb13aa24823895168502.jpg"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full">
-                        <h3><a class="font-serif text-4xl text-white font-semibold hover:text-black hover:no-underline hover:transition ease-in-out
-                            duration-300" href="http://www.meyer-law.ru/news/309">История одного города</a></h3>
-                        <div class="font-sans text-2xl text-black font-semibold tracking-wide ml-6">
-                            <ul>
-                                <li>10.11.2016 </li>
-                            </ul>
-                        </div>
-                        <p>
-                            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">
-                                &laquo;История одного города&raquo; – язвительное, полное иронии произведение, написанное М. Е. 
-                                Салтыковым-Щедриным в 1870 году.</p>
-                        </p>
-                        <br>
-                        <div class="bg-white py-4" style="width: 151px;">
-                        <a class="news relative z-[11] text-center uppercase text-gray-500 font-semibold hover:text-white hover:no-underline
-                        hover:border-white py-3 px-5 border-2 border-white transition delay-150
-                         duration-700" href="http://www.meyer-law.ru/news/309">Читать новость...</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="columns-md-12">
-                <div class="flex flex-col space-y-12 lg:flex lg:flex-row lg:space-x-12">
-                    <div class="columns-md-5">
-                        <div class="w-[340px] sm:w-[560px] md:w-[700px] lg:w-[410px]">
-                            <div class="frame" style="cursor:pointer;" onclick="location='http://www.meyer-law.ru/news/310';">
-                            <a href="http://www.meyer-law.ru/news/310">
-                                <img src="../img/anounce_f17ddb536b65762bb3a9bb81f19025e0.jpg"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full">
-                        <h3><a class="font-serif text-4xl text-white font-semibold hover:text-black hover:no-underline hover:transition ease-in-out
-                            duration-300" href="http://www.meyer-law.ru/news/310">Владимир Михайлович Миллер был одним из самых известных людей Царицына.</a></h3>
-                        <div class="font-sans text-2xl text-black font-semibold tracking-wide ml-6">
-                            <ul>
-                                <li>10.11.2016 </li>
-                            </ul>
-                        </div>
-                        <p>
-                            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">
-                                Владелец роскошного замка на берегу Царицы, хозяин заводов и гостиниц, фактический 
-                                создатель театра &laquo;Конкордия&raquo;, о нём и до сегодняшнего дня не иссякла память, хотя 
-                                многие существенные детали оказались забытыми. Миллера в Царицыне не любили и часто 
-                                ругали в газетах. Впрочем, поводы для агрессии и критики он исправно подавал сам.</p>
-                        </p>
-                        <br>
-                        <div class="bg-white py-4" style="width: 151px;">
-                        <a class="news relative z-[11] text-center uppercase text-gray-500 font-semibold hover:text-white hover:no-underline
-                        hover:border-white py-3 px-5 border-2 border-white transition delay-150
-                         duration-700" href="http://www.meyer-law.ru/news/310">Читать новость...</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="columns-md-12">
-                <div class="flex flex-col space-y-12 lg:flex lg:flex-row lg:space-x-12">
-                    <div class="columns-md-5">
-                        <div class="frame" style="cursor:pointer;" onclick="location='http://www.meyer-law.ru/news/315';">
-                            <a href="http://www.meyer-law.ru/news/315">
-                                <img src="../img/news-img.png"></a>
-                        </div>
-                    </div>
-                    <div class="w-full lg:w-2/3">
-                        <h3><a class="font-serif text-4xl text-white font-semibold hover:text-black hover:no-underline hover:transition ease-in-out
-                                    duration-300" href="http://www.meyer-law.ru/news/315">Интересные факты о жизни Дмитрия Ивановича Мейера</a>
-                        </h3>
-                        <div class="font-sans text-2xl text-black font-semibold tracking-wide ml-6">
-                            <ul>
-                                <li>23.11.2016 </li>
-                            </ul>
-                        </div>
-                        <p>
-                            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">
-                                На вопрос: &laquo;Не в честь ли выдающегося ученого и юриста XIX века Дмитрия Ивановича 
-                                Мейера названа Волгоградская коллегия адвокатов “Мейер и партнеры”?&raquo;, адвокаты 
-                                коллегии загадочно отвечают: &laquo;И в честь него тоже&raquo;. 
-                            </p>
-                        </p>
-                        <br>
-                        <div class="bg-white py-4" style="width: 151px;">
-                        <a class="news relative z-[11] text-center uppercase text-gray-500 font-semibold hover:text-white hover:no-underline
-                                hover:border-white py-3 px-5 border-2 border-white transition delay-150
-                                 duration-700" href="http://www.meyer-law.ru/news/315">Читать новость...</a>
-                                </div>
-                    </div>
-                </div>
-            </div>
-            <div class="columns-md-12">
-                <div class="flex flex-col space-y-12 lg:flex lg:flex-row lg:space-x-12">
-                    <div class="columns-md-5">
-                        <div class="w-[340px] sm:w-[560px] md:w-[700px] lg:w-[410px]">
-                            <div class="frame" style="cursor:pointer;" onclick="location='http://www.meyer-law.ru/news/335';">
-                            <a href="http://www.meyer-law.ru/news/335">
-                                <img src="../img/anounce_a52893945dd45d36219b95c5398a3428.jpg"  style="width: 410px;"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full">
-                        <h3><a class="font-serif text-4xl text-white font-semibold hover:text-black hover:no-underline hover:transition ease-in-out
-                            duration-300" href="http://www.meyer-law.ru/news/335">Судебное дело о судьбе научного наследия профессора Дмитрия Мейера</a></h3>
-                        <div class="font-sans text-2xl text-black font-semibold tracking-wide ml-6">
-                            <ul>
-                                <li>20.04.2017 </li>
-                            </ul>
-                        </div>
-                        <p>
-                            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">
-                                Представляем материалы знаменитого судебного процесса по гражданскому делу, рассмотренному 
-                                в XIX в. Санкт-Петербургской Судебной палатой по иску наследников Дмитрия Ивановича Мейера 
-                                к его ученику Александру Ивановичу Вицыну, защитником которого выступил адвокат Александр 
-                                Владимирович Лохвицкий.</p>
-                        </p>
-                        <br>
-                        <div class="bg-white py-4" style="width: 151px;">
-                        <a class="news relative z-[11] text-center uppercase text-gray-500 font-semibold hover:text-white hover:no-underline
-                        hover:border-white py-3 px-5 border-2 border-white transition delay-150
-                         duration-700" href="http://www.meyer-law.ru/news/335">Читать новость...</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="columns-md-12">
-                <div class="flex flex-col space-y-12 lg:flex lg:flex-row lg:space-x-12">
-                    <div class="columns-md-5">
-                        <div class="w-[340px] sm:w-[560px] md:w-[700px] lg:w-[410px]">
-                            <div class="frame" style="cursor:pointer;" onclick="location='http://www.meyer-law.ru/news/336';">
-                            <a href="http://www.meyer-law.ru/news/336">
-                                <img
-                                    src="../img/anounce_380ba0612f9c6f1718c9fc907c879916.jpg"></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="w-full">
-                        <h3><a class="font-serif text-4xl text-white font-semibold hover:text-black hover:no-underline hover:transition ease-in-out
-                                    duration-300" href="http://www.meyer-law.ru/news/336">&laquo;Поди, подавай на нас, куда знаешь! У нас хороший поверенный!&raquo;</a></h3>
-                        <div class="font-sans text-2xl text-black font-semibold tracking-wide ml-6">
-                            <ul>
-                                <li>20.04.2017 </li>
-                            </ul>
-                        </div>
-                        <p>
-                            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">
-                                Арбитражные споры, к тому же более драматичные для &laquo;бизнесменов&raquo;, чем в наши дни, 
-                                в XIX веке случались регулярно. Не была исключением и Саратовская губерния, в 
-                                которую тогда входила территория нынешней Волгоградской области. Об одной из 
-                                таких &laquo;арбитражных&raquo; историй мы и расскажем в этой статье.</p>
-                        </p>
-                        <br>
-                        <div class="bg-white py-4" style="width: 151px;">
-                        <a class="news relative z-[11] text-center uppercase text-gray-500 font-semibold hover:text-white hover:no-underline
-                                hover:border-white py-3 px-5 border-2 border-white transition delay-150
-                                 duration-700" href="http://www.meyer-law.ru/news/336">Читать новость...</a>
-                                </div>
-                    </div>
-                </div>
-            </div>
-            <div class="columns-md-12">
-                <div class="flex justify-center mt-32">
-                    <ul class="flex space-x-4">
-                        <li class="disabled"><span class="text-center rounded-r-lg uppercase text-gray-500 font-semibold hover:bg-red-500 hover:text-white hover:no-underline
-                            hover:border-white p-6 bg-white transition delay-100
-                             duration-300">Назад</span></li>
-                        <li class="active"><span class="text-center rounded-md uppercase text-gray-500 font-semibold hover:bg-red-500 hover:text-white hover:no-underline
-                            hover:border-white p-6 bg-white transition delay-100
-                             duration-300">1</span></li>
-                        <li class="disabled"><span class="text-center rounded-l-lg uppercase text-gray-500 font-semibold hover:bg-red-500 hover:text-white hover:no-underline
-                            hover:border-white p-6 bg-white transition delay-100
-                             duration-300">Дальше</span></li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+							<div class="col-md-9 col-sm-9">
+								<div class="col-md-3 col-sm-3 foot-col-3">
+									<nav class="navbar">
+										<ul class="navbar-nav list-inline foot foot-nav-list">
+											<li>
+												<a href="bankruptcy.html">
+													Банкротство
+												</a>
+											</li>
+											<li>
+												<a href="executiveLaw.html">
+													Исполнительное право
+												</a>
+											</li>
+											<li>
+												<a href="arbitrationProcess.html">
+													Арбитражный процесс
+												</a>
+											</li>
+											<li>
+												<a href="nalog.html">
+													Налоговое право
+												</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+								<div class="col-md-6 col-sm-6 foot-col-6">
+									<nav class="navbar">
+										<ul class="navbar-nav list-inline foot foot-nav-list">
+											<li>
+												<a href="constructionAndRealEstate.html">
+													Строительство и недвижимость
+												</a>
+											</li>
+											<li>
+												<a href="antitrustRgulation.html">
+													Антимонопольное регулирование
+												</a>
+											</li>
+											<li>
+												<a href="energy.html">
+													Природные ресурсы. Энергетика
+												</a>
+											</li>
+											<li>
+												<a href="corporateLaw.html">
+													Корпоративное право
+												</a>
+											</li>
+										</ul>
+									</nav>
+								</div>
+								<div class="col-md-3 col-sm-3 foot-col-3 text-center">
+									<div class="col-md-6 col-sm-12 col-xs-12">
+										<noindex>
+											<a href="http://www.fparf.ru/" rel="nofollow" target="_blank">
+												<img src="../img/gerb.png"> 
+											</a>
+										</noindex>
+									</div>
+									<div class="col-md-6 col-sm-12 col-xs-12">
+										<noindex>
+											<a href="http://www.apvo-volgograd.ru/" rel="nofollow" target="_blank">
+												<img src="../img/logo-(1).png"> 
+											</a>
+										</noindex>
+									</div>
+									<div class="col-md-12 col-sm-12 col-xs-12">
+											<a href="https://www.facebook.com/lawmeyer/" target="_blank" title="Официальная страница нашей компании на Facebook" class="link-facebook">
+												<i class="fa fa-facebook" aria-hidden="true">
+												</i> Facebook
+											</a>	
+									</div>
+								</div>
 
-    <footer class="mt-16">
-        <section class="cp-footer-content">
-            <div class="container mx-auto">
-                <div class="flex-row">
-                    <div class="columns-md-3 col-sm-3">
-                        <div class="columns-md-6 columns-sm-6 col-xs-6">
-                            <img class="footer-reward-left-img" src="../img/brand-1.png">
-                        </div>
-                        <div class="columns-md-6 columns-sm-6 col-xs-6">
-                            <img class="footer-reward-right-img" src="../img/brand-2.png">
-                        </div>
-                        <div class="col-md-12 columns-sm-6">
-                            <img src="../img/brand-3.png">
-                        </div>
-                    </div>
+								<div class="col-md-12 col-sm-12">
+									<div class="col-md-6 col-sm-6">
+										<div class="cp-contacts-section"> 400001, г. Волгоград, ул. Профсоюзная,
+											15а.<br> info@meyer-law.ru</div>
+									</div>
+									<div class="col-md-6 col-sm-6">
+										<div class="cp-copyright-section"> <strong class="copy">Адвокаты, Волгоград<br>
+												© «Мейер и партнеры»</strong> </div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</section>
+			</footer>
+		</div>
+	</div>
 
-                    <div class="columns-md-9 col-sm-9">
-                        <div class="col-md-3 col-sm-3 foot-col-3">
-                            <nav class="navbar">
-                                <ul class="space-y-6" style="color: #333;">
-                                    <li>
-                                        <i class="fas fa-square"></i>
-                                        <a class="font-serif text-2xl text-white font-semibold hover:text-white"
-                                            href="bankruptcy.html">
-                                            Банкротство</a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-square"></i>
-                                        <a class="font-serif text-2xl text-white font-semibold hover:text-white"
-                                            href="executiveLaw.html">
-                                            Исполнительное право</a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-square"></i>
-                                        <a class="font-serif text-2xl text-white font-semibold hover:text-white"
-                                            href="arbitrationProcess.html">
-                                            Арбитражный процесс</a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-square"></i>
-                                        <a class="font-serif text-2xl text-white font-semibold hover:text-white"
-                                            href="nalog.html">
-                                            Налоговое право</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="col-md-6 col-sm-6 foot-col-6">
-                            <nav class="navbar">
-                                <ul class="space-y-6" style="color: #333;">
-                                    <li>
-                                        <i class="fas fa-square"></i>
-                                        <a class="font-serif text-2xl text-white font-semibold hover:text-white"
-                                            href="constructionAndRealEstate.html">
-                                            Строительство и недвижимость</a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-square"></i>
-                                        <a class="font-serif text-2xl text-white font-semibold hover:text-white"
-                                            href="antitrustRgulation.html">
-                                            Антимонопольное регулирование</a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-square"></i>
-                                        <a class="font-serif text-2xl text-white font-semibold hover:text-white"
-                                            href="energy.html">
-                                            Природные ресурсы. Энергетика</a>
-                                    </li>
-                                    <li>
-                                        <i class="fas fa-square"></i>
-                                        <a class="font-serif text-2xl text-white font-semibold hover:text-white"
-                                            href="corporateLaw.html">
-                                            Корпоративное право</a>
-                                    </li>
-                                </ul>
-                            </nav>
-                        </div>
-                        <div class="flex justify-center sm:columns-md-3 col-sm-3">
-                            <div class="col-md-6 col-sm-12 col-xs-12">
-                                <noindex><a href="http://www.fparf.ru/" rel="nofollow" target="_blank"><img
-                                            src="../img/gerb.png"></a>
-                                </noindex>
-                            </div>
-                            <div class="col-md-6 col-sm-12 col-xs-12">
-                                <noindex><a href="http://www.apvo-volgograd.ru/" rel="nofollow" target="_blank"><img
-                                            src="../img/logo-(1).png"></a>
-                                </noindex>
-                            </div>
-                        </div>
+	<script src="../swiper/custom.js"></script>
+	<script src="../swiper/tailwind.js"></script>
 
-                        <div class="col-md-12 col-sm-12">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="cp-contacts-section"> 400001, г. Волгоград, ул. Профсоюзная,
-                                    15а.<br> info@meyer-law.ru</div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="cp-copyright-section"> <strong class="copy">Адвокаты, Волгоград<br>
-                                    © «Мейер и партнеры»</strong> </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    </footer>
-
-    <script src="../swiper/tailwind.js"></script>
-
-    </html>
+</html>
