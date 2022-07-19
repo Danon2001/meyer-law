@@ -5378,14 +5378,14 @@ input,button,textarea{outline:none;}
 	margin-bottom:30px;
 }
 
-#main_1 {
-    float: left;
-    width: 100%;
-	background-color: #b7b7b3;
-}
-
 #main_2 {
     float: left;
     width: 100%;
-	background-color: #c5c6c3;
+	background: linear-gradient(to bottom, rgba(255, 255, 255, 0.9) 0%,
+	rgba(255, 255, 255, 0.92) 10%,
+	rgba(255, 255, 255, 0.94) 20%,
+	rgba(255, 255, 255, 0.96) 30%,
+	rgba(255, 255, 255, 0.94) 80%,
+	rgba(255, 255, 255, 0.92) 90%,
+	rgba(255, 255, 255, 0.9) 100%);
 }
