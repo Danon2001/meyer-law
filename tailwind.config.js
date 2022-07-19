@@ -7,8 +7,12 @@ module.exports = {
       'Raleway': ['Raleway', 'sans-serif'],
       'OpenSans': ['Open Sans', 'sans-serif'],
       'PTSerif': ['PT Serif', 'serif'],
-      "Helvetica": ['Helvetica,Arial','sans-serif'],
-      'Futura': ['Futura PT Medium', 'arial sans-serif']
+      'Helvetica': ['Helvetica,Arial','sans-serif'],
+      'Futura': ['Futura PT Medium', 'arial sans-serif'],
+      'AvenirNextCyr': ['AvenirNextCyr-Demi', 'arial sans-serif'],
+      'Futuris': ['Futuris', 'arial sans-serif'],
+      'FuturaPTBook': ['Futura PT Book'],
+      'FuturaPTMedium': ['Futura PT Medium', 'arial sans-serif']
     },
   },
   plugins: [],
