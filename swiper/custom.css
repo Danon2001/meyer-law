@@ -5393,3 +5393,12 @@ input,button,textarea{outline:none;}
 .text-right {
     text-align: right;
 }
+
+@media (min-width:769px){
+	.footer-bg {
+        background: -webkit-linear-gradient(left, rgba(255, 255, 255, 0) 80%, #ab2b3a 80%, #ab2b3a 100%)
+    }
+}
+
+.footer-bg {}
+
