@@ -5389,3 +5389,7 @@ input,button,textarea{outline:none;}
 	rgba(255, 255, 255, 0.92) 90%,
 	rgba(255, 255, 255, 0.9) 100%);
 }
+
+.text-right {
+    text-align: right;
+}
