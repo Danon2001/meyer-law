@@ -4645,7 +4645,7 @@ color: #000;text-decoration: none;}
     position: relative;
 }
 .accordion_cp::before {
-    content: "\f00c";
+    content: "";
     position: absolute;
     font-family: FontAwesome;
     left: 19px;
