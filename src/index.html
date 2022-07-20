@@ -18,10 +18,20 @@
 
 
   <script src="../swiper/jquery-1.11.3.min.js"></script>
+  <script>
+	function hidePreloader()
+	{
+		jQuery(function($) {
+			$('#page-preloader').remove();
+		});
+	}
+	setTimeout('hidePreloader();',5500);
+</script>
 </head>
 
 
 <body class="flex flex-col cp-theme-style-1">
+<div id="page-preloader"><span class="spinner"></span></div>
 	<div id="wrapper">
 		  <header inset-0 h-12 id="header">
 			<section class="cp-head-topbar">
@@ -460,6 +470,16 @@
   <script src="../swiper/custom.js"></script>
   <script src="../swiper/jquery.bxslider.min.js"></script>
   
+  <script>jQuery(function($) {
+
+	$(window).on('load', function () {
+		var $preloader = $('#page-preloader'),
+			$spinner   = $preloader.find('.spinner');
+		$spinner.fadeOut();
+		$preloader.delay(350).fadeOut('slow');
+	});
+	
+});</script>
 </body>
 
 </html>

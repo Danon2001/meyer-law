@@ -5402,3 +5402,21 @@ input,button,textarea{outline:none;}
 
 .footer-bg {}
 
+#page-preloader {
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background: #FFFFFF;
+    z-index: 100500;
+}
+
+#page-preloader .spinner {
+    width: 400px;
+    height: 300px;
+    position: absolute;
+    left: 37%;
+    top: 25%;
+    background: url('../img/anim.gif') no-repeat 50% 50%;
+}
