@@ -14,9 +14,13 @@
     <link rel="stylesheet" href="../swiper/custom.css">
     <link rel="stylesheet" href="../swiper/color.css">
     <link href="../swiper/responsive.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="../slick/slick.css">
+    <link rel="stylesheet" href="../slick/slick-theme.css">
+    <link rel="stylesheet" href="../src/lightbox.css">
 
 
     <script src="../swiper/jquery-1.11.3.min.js"></script>
+    <script src="../slick/slick.min.js"></script>
 
 </head>
 
@@ -134,27 +138,50 @@
         <div class="container mx-auto">
             <div class="flex-1 flex-row">
                 <div class="col-md-9">
-                    <div class=""> <a href="../img/full_30eff7b5982035cce466f68f5d1d388d.jpg"><img
-                                src="../img/full_30eff7b5982035cce466f68f5d1d388d.jpg" alt=""></a> </div>
-
-
-                        <div class="image_swiper swiper">
-                            <div class="swiper-wrapper">
-                            <div class="flex flex-row mt-4 ml-6">
-                                <div class="swiper-slide">
-                                    <img 
-                                     src="../img/full_30eff7b5982035cce466f68f5d1d388d.jpg" alt="" class="h-48 w-36">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="../img/image_ae51d5ce896f005e644adc5dc7702fb6.jpg" alt="" class="h-48 w-36">
-                                </div>
-                                <div class="swiper-slide">
-                                    <img src="../img/image_397d09ec49b022c77bb655fd170b712a.jpg" alt="" class="h-48 w-36">
-                                </div>
-                            </div>
+                    <div class="cp-post-box">
+                        <div class=""> 
+                            <a href="http://www.meyer-law.ru/core/views/meyer/upload/news/full_30eff7b5982035cce466f68f5d1d388d.jpg" data-lightbox="roadtrip" id="news_img_href"><img id="news_img" src="http://www.meyer-law.ru/core/views/meyer/upload/news/full_30eff7b5982035cce466f68f5d1d388d.jpg" alt="Изображение новости"></a> 
                         </div>
                     </div>
 
+                    <div id="pics_set" class="col-md-12">
+										
+                        <div>
+                            <img class="max-h-[96px]" id="img_main" style="cursor:pointer;" onclick="prevImage('main');" src="../img/men.jpg" height="96">                      
+                        </div>
+                        <div>
+                            <img class="max-h-[96px]" style="cursor:pointer;" id="img_134" onclick="prevImage('134');" src="../img/peoples.jpg" height="96">  
+                        </div>
+                        <div>
+                            <img class="max-h-[96px]" style="cursor:pointer;" id="img_135" onclick="prevImage('135');" src="../img/people.jpg" height="96">  
+                        </div>
+                    </div>
+                       
+
+                    <script>
+                        
+						$('#pics_set').slick({
+						    infinite: false,
+						    centerMode: false,
+						    variableWidth: true,
+						    slidesToShow: 4,
+						    slidesToScroll: 4,
+						    nextArrow:'<a  id="damn_click_right" class="slick-next btn-style-1"><i class="fa fa-angle-right" aria-hidden="true"></i></a>',
+					        prevArrow:'<a  id="damn_click_left" class="slick-next btn-style-1"><i class="fa fa-angle-left" aria-hidden="true"></i></a>'
+						});		
+                        
+                        function prevImage(imgId)
+	                    {
+		                    (function($)
+	                    	{
+	                    		var newsrc=$('#img_'+imgId).attr('src');
+	                    		$('#news_img').attr('src',newsrc);
+	                    		$('#news_img_href').attr('href',newsrc);
+	                    	})(jQuery);
+                        
+	                    }
+						
+                    </script>
 
 
                     <h3 class="font-serif text-4xl text-white font-semibold mt-10">XII ежегодный конкурс студенческих работ им. Д. И. Мейера</h3>
@@ -368,6 +395,7 @@
     </div>
 
     <script src="../swiper/tailwind.js"></script>
+    <script src="../src/lightbox.js"></script>
 
 </body>
 
