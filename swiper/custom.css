@@ -263,7 +263,6 @@ body {
     position: relative;
 }
 #header {
-    float: left;
     width: 100%;
 }
 .cp-head-topbar {
@@ -2326,7 +2325,6 @@ strong.footer-logo a {
     color: #fff;
 }
 #inner-banner {
-    float: left;
     width: 100%;
     background-image: url(../img/inner-banner.png);
     background-repeat: no-repeat;
