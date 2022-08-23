@@ -17,10 +17,86 @@
     <link rel="stylesheet" href="../slick/slick.css">
     <link rel="stylesheet" href="../slick/slick-theme.css">
     <link rel="stylesheet" href="../src/lightbox.css">
+    <link rel="stylesheet" href="../swiper/swiper-bundle.min.css">
 
 
     <script src="../swiper/jquery-1.11.3.min.js"></script>
     <script src="../slick/slick.min.js"></script>
+    <script src="../swiper/swiper-bundle.min.js"></script>  
+    <style>
+        .swiper {
+          width: 100%;
+          height: 100%;
+          z-index: 0;
+        }
+  
+        .swiper-slide {
+          text-align: center;
+          font-size: 18px;
+          background: #fff;
+  
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+        }
+  
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+  
+        .swiper {
+          width: 100%;
+          height: 300px;
+          margin-left: 0;
+          margin-right: 0;
+        }
+  
+        .swiper-slide {
+          background-size: cover;
+          background-position: center;
+        }
+  
+        .mySwiper2 {
+          height: 80%;
+          width: 80%;
+        }
+  
+        .mySwiper {
+          height: 20%;
+          box-sizing: border-box;
+          padding: 10px 0;
+        }
+  
+        .mySwiper .swiper-slide {
+          width: 25%;
+          height: 100%;
+          opacity: 0.4;
+        }
+  
+        .mySwiper .swiper-slide-thumb-active {
+          opacity: 1;
+        }
+  
+        .swiper-slide img {
+          display: block;
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      </style>
 
 </head>
 
@@ -57,62 +133,62 @@
             <div class="navigation-right whitespace-nowrap">
                 <div class="burger">
                     <nav class="navbar navbar-inverse">
-                      <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar"
-                          aria-expanded="false" aria-controls="navbar">
-                          <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
-                            class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                      </div>
-                      <div id="navbar" class="collapse navbar-collapse">
-                <ul class="flex space-x-0">
-                    <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
+                        <div class="navbar-header">
+                            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                                data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                                <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+                                    class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                        </div>
+                        <div id="navbar" class="collapse navbar-collapse">
+                            <ul class="flex space-x-0">
+                                <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
                          transition ease-in duration-300 hover:no-underline hover:text-gray-600" href="index.html">
-                            О нас
-                        </a></li>
-                    <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
+                                        О нас
+                                    </a></li>
+                                <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
                          transition ease-in duration-300 hover:no-underline hover:text-gray-600" href="ourSkill.html">
-                            Наш опыт
-                        </a>
-                    </li>
-                    <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
+                                        Наш опыт
+                                    </a>
+                                </li>
+                                <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
                          transition ease-in duration-300 hover:no-underline hover:text-gray-600" href="news.html">
-                            Новости
-                        </a></li>
-                    <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
+                                        Новости
+                                    </a></li>
+                                <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
                          transition ease-in duration-300 hover:no-underline hover:text-gray-600"
-                            href="interestsFacts.html">
-                            Интересные
-                            факты
-                        </a></li>
-                    <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
+                                        href="interestsFacts.html">
+                                        Интересные
+                                        факты
+                                    </a></li>
+                                <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
                          transition ease-in duration-300 hover:no-underline hover:text-gray-600" href="search.html">
-                            Поиск
-                        </a>
-                    </li>
-                </ul>
-                <ul class="flex space-x-0">
-                    <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
+                                        Поиск
+                                    </a>
+                                </li>
+                            </ul>
+                            <ul class="flex space-x-0">
+                                <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
                          transition ease-in duration-300 hover:no-underline hover:text-gray-600" href="proBono.html">
-                            Pro bono
-                        </a></li>
-                    <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
+                                        Pro bono
+                                    </a></li>
+                                <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
                          transition ease-in duration-300 hover:no-underline hover:text-gray-600" href="reviews.html">
-                            Отзывы
-                        </a></li>
-                    <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
+                                        Отзывы
+                                    </a></li>
+                                <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
                          transition ease-in duration-300 hover:no-underline hover:text-gray-600"
-                            href="conkursMayera.html">
-                            Конкурс «Мейера»
-                        </a></li>
-                    <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
+                                        href="conkursMayera.html">
+                                        Конкурс «Мейера»
+                                    </a></li>
+                                <li><a class="px-7 font-serif text-3xl text-gray-600 font-medium border border-gray-400/0 hover:border-slate-800
                          transition ease-in duration-300 hover:no-underline hover:text-gray-600" href="contacts.html">
-                            Контакты
-                        </a></li>
-                </ul>
-                      </div>
+                                        Контакты
+                                    </a></li>
+                            </ul>
+                        </div>
                     </nav>
+                </div>
             </div>
-        </div>
     </header>
 
 
@@ -131,137 +207,155 @@
     </div>
 
 
-
-
-
     <section class="mt-24">
         <div class="container mx-auto">
             <div class="flex-1 flex-row">
-                <div class="col-md-9">
-                    <div class="cp-post-box">
-                        <div class=""> 
-                            <a href="http://www.meyer-law.ru/core/views/meyer/upload/news/full_30eff7b5982035cce466f68f5d1d388d.jpg" data-lightbox="roadtrip" id="news_img_href"><img id="news_img" src="http://www.meyer-law.ru/core/views/meyer/upload/news/full_30eff7b5982035cce466f68f5d1d388d.jpg" alt="Изображение новости"></a> 
+                <div class="col-md-7">
+                    <div style="--swiper-navigation-color: #fff; --swiper-pagination-color: #fff"
+                        class="swiper mySwiper2">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../img/men.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../img/peoples.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../img/people.jpg" />
+                            </div>
+                        </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                    <div thumbsSlider="" class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="../img/men.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../img/peoples.jpg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="../img/people.jpg" />
+                            </div>
                         </div>
                     </div>
-
-                    <div id="pics_set" class="col-md-12">
-										
-                        <div>
-                            <img class="max-h-[96px]" id="img_main" style="cursor:pointer;" onclick="prevImage('main');" src="../img/men.jpg" height="96">                      
-                        </div>
-                        <div>
-                            <img class="max-h-[96px]" style="cursor:pointer;" id="img_134" onclick="prevImage('134');" src="../img/peoples.jpg" height="96">  
-                        </div>
-                        <div>
-                            <img class="max-h-[96px]" style="cursor:pointer;" id="img_135" onclick="prevImage('135');" src="../img/people.jpg" height="96">  
-                        </div>
-                    </div>
-                       
 
                     <script>
-                        
-						$('#pics_set').slick({
-						    infinite: false,
-						    centerMode: false,
-						    variableWidth: true,
-						    slidesToShow: 4,
-						    slidesToScroll: 4,
-						    nextArrow:'<a  id="damn_click_right" class="slick-next btn-style-1"><i class="fa fa-angle-right" aria-hidden="true"></i></a>',
-					        prevArrow:'<a  id="damn_click_left" class="slick-next btn-style-1"><i class="fa fa-angle-left" aria-hidden="true"></i></a>'
-						});		
-                        
-                        function prevImage(imgId)
-	                    {
-		                    (function($)
-	                    	{
-	                    		var newsrc=$('#img_'+imgId).attr('src');
-	                    		$('#news_img').attr('src',newsrc);
-	                    		$('#news_img_href').attr('href',newsrc);
-	                    	})(jQuery);
-                        
-	                    }
-						
-                    </script>
+                        var swiper = new Swiper(".mySwiper", {
+                          spaceBetween: 10,
+                          slidesPerView: 8,
+                          freeMode: true,
+                          watchSlidesProgress: true,
+                        });
+                        var swiper2 = new Swiper(".mySwiper2", {
+                          spaceBetween: 10,
+                          loop: true,
+                          navigation: {
+                            nextEl: ".swiper-button-next",
+                            prevEl: ".swiper-button-prev",
+                          },
+                          thumbs: {
+                            swiper: swiper,
+                          },
+                        });
+                      </script>
 
-
-                    <h3 class="font-serif text-4xl text-white font-semibold mt-10">XII ежегодный конкурс студенческих работ им. Д. И. Мейера</h3>
+                    <h3 class="font-serif text-4xl text-white font-semibold mt-10">XII ежегодный конкурс студенческих
+                        работ им. Д. И. Мейера</h3>
                     <div class="font-sans text-2xl text-black font-semibold tracking-wide 2xl:ml-6 mt-6 mb-8">
                         <ul>
                             <li>30.06.2021 </li>
                         </ul>
                     </div>
-                        <div>
-                            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">В начале 
-                                2021 года Волгоградская коллегия адвокатов «Мейер и партнеры» объявила о
-                                проведении Двенадцатого ежегодного конкурса студенческих работ имени Д.И. Мейера.
-                            </p>
-                            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">К участию 
-                                в конкурсе были приглашены студенты юридических факультетов высших учебных
-                                заведений, обучающиеся по программам бакалавриата (3–4 курсы) и магистратуры.</p>
-                            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">По условиям 
-                                конкурса до 31 мая 2021 года студенты могли представить конкурсные
-                                работы. В этот срок «Мейер и партнеры» получили 17 конкурсных работ от студентов и
-                                магистрантов пяти волгоградских вузов. Учитывая высокие требования конкурса, в его
-                                финальную часть пробились два участника.</p>
-                            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">Финалистами 
-                                конкурса стали магистрант Института права ФГАОУ ВО «Волгоградский
-                                государственный университет» Наумов Александр Николаевич и студент 3-го курса
-                                Волгоградского института управления – филиала РАНХиГС Туров Георг Сергеевич.</p>
-                            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">10 июня 2021 
-                                года работы финалистов оценивало жюри в составе управляющих партнеров
-                                «Мейер и партнеры» Олега Коробова и Олега Елкина, адвокатов Андрея Белоножкина и
-                                Вячеслава Великанова.</p>
-                            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">Магистрант Наумов А. Н. 
-                                представил эссе на тему «Банкротство физических лиц», раскрыв
-                                вопросы применения на практике законодательства о несостоятельности (банкротстве)
-                                физических лиц, в том числе правовые пробелы и коллизии в этой сфере.</p>
-                            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">Эссе студента Турова Г. С. 
-                                было посвящено теме «Законодательство о банкротстве в РФ:
-                                влияние на бизнес и пути совершенствования», в рамках которой он, опираясь на
-                                положения доктрины и судебной практики, осветил разные модели банкротства в
-                                отечественной системе права и обосновал новые способы совершенствования
-                                законодательства РФ в сфере применения отдельных процедур банкротства.</p>
-                            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">Финалисты 
-                                конкурса смогли показать свои знания, эрудицию и практический опыт работы,
-                                заявив о себе с большой буквы. Члены жюри по достоинству оценили труд будущих
-                                юристов, вручив им памятные подарки и дипломы участников.</p>
-                            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">Желаем всем 
-                                участникам конкурса новых творческих успехов и профессиональных
-                                достижений!</p>
-                            <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">Ждем старта XIII 
-                                конкурса студенческих работ им. Д.И. Мейера в 2022 году! Следите за
-                                новостями на нашем сайте: <a
-                                    href="../src/conkursMayera.html">http://www.meyer-law.ru/page/contests</a></p>
-                        </div>
+                    <div>
+                        <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">В начале
+                            2021 года Волгоградская коллегия адвокатов «Мейер и партнеры» объявила о
+                            проведении Двенадцатого ежегодного конкурса студенческих работ имени Д.И. Мейера.
+                        </p>
+                        <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">К участию
+                            в конкурсе были приглашены студенты юридических факультетов высших учебных
+                            заведений, обучающиеся по программам бакалавриата (3–4 курсы) и магистратуры.</p>
+                        <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">По условиям
+                            конкурса до 31 мая 2021 года студенты могли представить конкурсные
+                            работы. В этот срок «Мейер и партнеры» получили 17 конкурсных работ от студентов и
+                            магистрантов пяти волгоградских вузов. Учитывая высокие требования конкурса, в его
+                            финальную часть пробились два участника.</p>
+                        <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">Финалистами
+                            конкурса стали магистрант Института права ФГАОУ ВО «Волгоградский
+                            государственный университет» Наумов Александр Николаевич и студент 3-го курса
+                            Волгоградского института управления – филиала РАНХиГС Туров Георг Сергеевич.</p>
+                        <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">10 июня 2021
+                            года работы финалистов оценивало жюри в составе управляющих партнеров
+                            «Мейер и партнеры» Олега Коробова и Олега Елкина, адвокатов Андрея Белоножкина и
+                            Вячеслава Великанова.</p>
+                        <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">Магистрант
+                            Наумов А. Н.
+                            представил эссе на тему «Банкротство физических лиц», раскрыв
+                            вопросы применения на практике законодательства о несостоятельности (банкротстве)
+                            физических лиц, в том числе правовые пробелы и коллизии в этой сфере.</p>
+                        <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">Эссе студента
+                            Турова Г. С.
+                            было посвящено теме «Законодательство о банкротстве в РФ:
+                            влияние на бизнес и пути совершенствования», в рамках которой он, опираясь на
+                            положения доктрины и судебной практики, осветил разные модели банкротства в
+                            отечественной системе права и обосновал новые способы совершенствования
+                            законодательства РФ в сфере применения отдельных процедур банкротства.</p>
+                        <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">Финалисты
+                            конкурса смогли показать свои знания, эрудицию и практический опыт работы,
+                            заявив о себе с большой буквы. Члены жюри по достоинству оценили труд будущих
+                            юристов, вручив им памятные подарки и дипломы участников.</p>
+                        <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">Желаем всем
+                            участникам конкурса новых творческих успехов и профессиональных
+                            достижений!</p>
+                        <p class="font-serif text-3xl text-white font-extralight tracking-wide leading-10">Ждем старта
+                            XIII
+                            конкурса студенческих работ им. Д.И. Мейера в 2022 году! Следите за
+                            новостями на нашем сайте: <a
+                                href="../src/conkursMayera.html">http://www.meyer-law.ru/page/contests</a></p>
+                    </div>
                 </div>
                 <div class="col-md-3">
                     <div class="bg-gray-500/70 mt-28 lg:-mt-8">
                         <h2>
-                          <p class="font-serif text-3xl text-white font-semibold ml-5 py-5">
-                            Последние новости</p>
+                            <p class="font-serif text-3xl text-white font-semibold ml-5 py-5">
+                                Последние новости</p>
                         </h2>
-                      </div>
+                    </div>
 
-                        <div class="cp-legal-news -mt-4">
-                            <ul>
-                                <li class="hover:text-white hover:bg-red-600"><a href="http://www.meyer-law.ru/news/445"><p class="font-serif text-[12px] font-semibold"> 
-                                    31 мая День Российской адвокатуры</p></a>
-                                </li>
-                                <li class="hover:text-white hover:bg-red-600"><a href="http://www.meyer-law.ru/news/444"><p class="font-serif text-[12px] font-semibold">Статья 
-                                    юрисконсульта ВКА «Мейер и
-                                        партнеры» Чуприкова М.В.</p</a></li>
-                                <li class="hover:text-white hover:bg-red-600"><a href="http://www.meyer-law.ru/news/443"><p class="font-serif text-[12px] font-semibold">С Днём рождения, 
-                                    «Мейер»!</p</a></li>
-                                <li class="hover:text-white hover:bg-red-600"><a href="http://www.meyer-law.ru/news/442"><p class="font-serif text-[12px] font-semibold">Волгоградская 
-                                    коллегия адвокатов «Мейер и партнеры» в рейтинге лидеров юридических услуг «Коммерсантъ»</p</a></li>
-                                <li class="hover:text-white hover:bg-red-600"><a href="http://www.meyer-law.ru/news/441"><p class="font-serif text-[12px] font-semibold">Дорогие друзья!</p</a></li>
-                            </ul>
-                            <div class="mb-2">
-                                <span style="text-align:left;"><a class="text-red-800 text-2xl hover:underline uppercase tracking-tight hover:text-red-800"
-                                    href="archive.html">Архив Новостей <i class="fas fa-long-arrow-alt-right" aria-hidden="true"></i></a></span>
-                              </div>
-
+                    <div class="cp-legal-news -mt-4">
+                        <ul>
+                            <li class="hover:text-white hover:bg-red-600"><a href="http://www.meyer-law.ru/news/445">
+                                    <p class="font-serif text-[12px] font-semibold">
+                                        31 мая День Российской адвокатуры</p>
+                                </a>
+                            </li>
+                            <li class="hover:text-white hover:bg-red-600"><a href="http://www.meyer-law.ru/news/444">
+                                    <p class="font-serif text-[12px] font-semibold">Статья
+                                        юрисконсульта ВКА «Мейер и
+                                        партнеры» Чуприкова М.В.</p< /a>
+                            </li>
+                            <li class="hover:text-white hover:bg-red-600"><a href="http://www.meyer-law.ru/news/443">
+                                    <p class="font-serif text-[12px] font-semibold">С Днём рождения,
+                                        «Мейер»!</p< /a>
+                            </li>
+                            <li class="hover:text-white hover:bg-red-600"><a href="http://www.meyer-law.ru/news/442">
+                                    <p class="font-serif text-[12px] font-semibold">Волгоградская
+                                        коллегия адвокатов «Мейер и партнеры» в рейтинге лидеров юридических услуг
+                                        «Коммерсантъ»</p< /a>
+                            </li>
+                            <li class="hover:text-white hover:bg-red-600"><a href="http://www.meyer-law.ru/news/441">
+                                    <p class="font-serif text-[12px] font-semibold">Дорогие друзья!</p< /a>
+                            </li>
+                        </ul>
+                        <div class="mb-2">
+                            <span style="text-align:left;"><a
+                                    class="text-red-800 text-2xl hover:underline uppercase tracking-tight hover:text-red-800"
+                                    href="archive.html">Архив Новостей <i class="fas fa-long-arrow-alt-right"
+                                        aria-hidden="true"></i></a></span>
                         </div>
+
+                    </div>
                 </div>
             </div>
         </div>
@@ -384,7 +478,8 @@
                     <div class="columns-md-12 col-sm-12 text-center news-pod py-1 sm:py-3">
                         <input placeholder="E-mail" class="border transition duration-500 placeholder-gray-400 font-normal text-3xl border-slate-800 py-1 sm:py-4
             text-left pl-4 text-slate-800 focus:outline-none">
-                        <a href="#subscribe_form" class="text-center text-3xl text-red-700 font-medium hover:bg-red-700 hover:text-white hover:no-underline
+                        <a href="#subscribe_form"
+                            class="text-center text-3xl text-red-700 font-medium hover:bg-red-700 hover:text-white hover:no-underline
              hover:border-white py-1 sm:py-4 bg-white border-2 border-red-700 transition delay-150 duration-700">Подписаться
                             на новости</a>
                     </div>
